@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://amaralgama.adv.br/artigo-lgpd.html" />
+<meta property="og:title" content="LGPD no condomínio: o que o síndico precisa fazer agora para evitar multa — Amaral Gama" />
+<meta property="og:description" content="A Lei Geral de Proteção de Dados se aplica a condomínios. Câmeras, cadastros, dados de funcionários — saiba o que precisa mudar imediatamente." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://amaralgama.adv.br/artigo-lgpd.html" />
+<meta property="og:image" content="https://amaralgama.adv.br/og-amaralgama.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="description" content="LGPD no condomínio: obrigações do síndico, câmeras, dados de moradores — Amaral Gama Advogados">
+<title>LGPD no condomínio: o que o síndico precisa fazer agora para evitar multa — Amaral Gama</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ink:#050704;--forest:#1E2A14;--forest-mid:#374D24;--forest-light:#4A5C35;
+  --gold:#A9800E;--gold-bright:#C9A84C;--gold-dark:#7A5C0A;--gold-pale:#EDE8D5;
+  --cream:#F1F0EE;--cream-dark:#E5E3DD;--white:#FFFFFF;
+  --text:#1E2A14;--text-soft:#5A6A45;
+  --ff-display:'Cormorant Garamond',Georgia,serif;
+  --ff-body:'Jost',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--ff-body);color:var(--text);background:var(--cream);overflow-x:hidden}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-track{background:var(--forest)}
+::-webkit-scrollbar-thumb{background:var(--gold)}
+h1,h2,h3,h4{font-family:var(--ff-display);line-height:1.15;letter-spacing:-0.01em}
+
+/* NAV */
+.art-nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(241,240,238,0.97);backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(169,128,14,0.18);
+  padding:0 6vw;height:80px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+/* FULL NAV (matching site pattern) */
+.nav-logo img{height:64px;display:block;object-fit:contain}
+.nav-links{display:flex;align-items:center;gap:2.2rem;list-style:none}
+.nav-links a{
+  color:var(--forest-mid);text-decoration:none;font-size:0.72rem;font-weight:400;
+  letter-spacing:0.14em;text-transform:uppercase;transition:color 0.2s;position:relative;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:-4px;left:0;right:0;height:1px;
+  background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform 0.3s;
+}
+.nav-links a:hover{color:var(--gold)}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-cta{
+  background:var(--forest)!important;color:var(--cream)!important;
+  padding:10px 22px!important;font-size:0.7rem!important;font-weight:400!important;
+  letter-spacing:0.12em!important;text-transform:uppercase!important;
+  transition:background 0.25s!important;border:none!important;
+}
+.nav-cta::after{display:none!important}
+.nav-cta:hover{background:var(--gold)!important;color:var(--forest)!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer}
+.hamburger span{width:26px;height:1px;background:var(--forest);transition:all 0.3s}
+.mobile-menu{
+  display:none;position:fixed;top:80px;left:0;right:0;bottom:0;
+  background:var(--forest);z-index:199;padding:3rem 6vw;flex-direction:column;gap:0;
+}
+.mobile-menu.open{display:flex}
+.mobile-menu a{
+  color:rgba(241,240,238,0.8);text-decoration:none;font-family:var(--ff-display);
+  font-size:2.2rem;font-weight:300;padding:1rem 0;
+  border-bottom:1px solid rgba(169,128,14,0.12);transition:color 0.2s;
+}
+.mobile-menu a:hover{color:var(--gold-bright)}
+
+/* STRUCTURED FOOTER */
+footer{background:var(--ink);padding:70px 6vw 30px}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:3rem;margin-bottom:4rem;padding-bottom:4rem;border-bottom:1px solid rgba(255,255,255,0.06)}
+.footer-brand img{height:32px;margin-bottom:1.5rem;filter:brightness(0) invert(1) opacity(0.55);display:block}
+.footer-desc{font-size:0.83rem;color:rgba(255,255,255,0.3);line-height:1.85;font-weight:300;max-width:320px}
+.footer-col h4{font-family:var(--ff-display);font-size:1rem;font-weight:400;color:rgba(255,255,255,0.5);margin-bottom:1.4rem}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:0.7rem}
+.footer-col ul li a{font-size:0.82rem;color:rgba(255,255,255,0.3);text-decoration:none;font-weight:300;transition:color 0.2s}
+.footer-col ul li a:hover{color:var(--gold)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center}
+.footer-copy,.footer-oab{font-size:0.68rem;color:rgba(255,255,255,0.2);font-weight:300;letter-spacing:0.04em}
+.footer-social{display:flex;gap:1rem;margin-top:0.5rem;flex-wrap:wrap}
+.social-link{
+  width:38px;height:38px;display:flex;align-items:center;justify-content:center;
+  border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.4);transition:all 0.3s;
+}
+.social-link svg{width:18px;height:18px}
+.social-link:hover{border-color:var(--gold);color:var(--gold);background:rgba(169,128,14,0.08);transform:translateY(-2px)}
+
+/* HERO */
+.art-hero{
+  background:var(--forest);padding:80px 6vw 70px;
+  position:relative;overflow:hidden;
+}
+.art-hero::after{
+  content:'';position:absolute;right:-5%;top:-30%;
+  width:500px;height:500px;
+  border:1px solid rgba(169,128,14,0.07);border-radius:50%;pointer-events:none;
+}
+.art-hero::before{
+  content:'';position:absolute;right:10%;bottom:-20%;
+  width:280px;height:280px;
+  border:1px solid rgba(169,128,14,0.05);border-radius:50%;pointer-events:none;
+}
+.art-tag{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:0.67rem;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--gold);font-weight:400;margin-bottom:1.5rem;
+}
+.art-tag::before{content:'';width:24px;height:1px;background:var(--gold)}
+.art-hero h1{
+  font-size:clamp(2.2rem,4vw,3.6rem);font-weight:300;
+  color:var(--white);line-height:1.12;max-width:780px;margin-bottom:1.5rem;
+}
+.art-meta{font-size:0.72rem;color:rgba(241,240,238,0.35);letter-spacing:0.1em;text-transform:uppercase}
+
+/* BODY */
+.art-body{max-width:780px;margin:0 auto;padding:70px 6vw 100px}
+.art-lead{
+  font-family:var(--ff-display);font-size:1.35rem;font-weight:300;font-style:italic;
+  color:var(--forest-mid);line-height:1.65;margin-bottom:3rem;
+  padding-bottom:2.5rem;border-bottom:1px solid rgba(169,128,14,0.2);
+}
+.art-body h2{font-size:1.8rem;font-weight:400;color:var(--forest);margin:3rem 0 1rem}
+.art-body h3{font-size:1.3rem;font-weight:400;color:var(--forest);margin:2.2rem 0 0.7rem}
+.art-body p{font-size:0.97rem;color:var(--text-soft);line-height:1.9;margin-bottom:1.2rem;font-weight:300}
+.art-body strong{color:var(--forest);font-weight:500}
+.art-body ul,.art-body ol{margin:0.8rem 0 1.5rem 1.5rem;display:flex;flex-direction:column;gap:0.5rem}
+.art-body li{font-size:0.97rem;color:var(--text-soft);line-height:1.8;font-weight:300}
+.art-body li::marker{color:var(--gold)}
+
+/* CALLOUT — cream-dark background, no white */
+.callout{
+  background:var(--cream-dark);
+  border-left:2px solid var(--gold);
+  padding:1.5rem 2rem;margin:2.5rem 0;
+}
+.callout p{color:var(--forest-mid);font-size:0.95rem;margin:0;line-height:1.75}
+
+/* RISK / HIGHLIGHT CARDS — cream-dark, no white */
+.risk-card{
+  background:var(--cream-dark);
+  border-left:2px solid var(--gold);
+  padding:2rem 2rem 2rem 2.2rem;
+  margin:2rem 0;
+}
+.risk-num{
+  font-family:var(--ff-display);font-size:0.7rem;color:var(--gold);
+  letter-spacing:0.2em;text-transform:uppercase;margin-bottom:0.7rem;
+}
+.risk-card h3{font-size:1.2rem;font-weight:400;color:var(--forest);margin-bottom:0.6rem;margin-top:0}
+.risk-card p{font-size:0.9rem;color:var(--text-soft);line-height:1.8;margin:0;font-weight:300}
+
+/* CTA */
+.art-cta{
+  background:var(--forest);padding:3.5rem;margin-top:4rem;
+  text-align:center;position:relative;overflow:hidden;
+}
+.art-cta::after{
+  content:'';position:absolute;right:-10%;top:-40%;
+  width:400px;height:400px;
+  border:1px solid rgba(169,128,14,0.08);border-radius:50%;pointer-events:none;
+}
+.art-cta h3{font-family:var(--ff-display);font-size:2rem;font-weight:300;color:var(--white);margin-bottom:0.8rem}
+.art-cta p{font-size:0.9rem;color:rgba(241,240,238,0.5);margin-bottom:2rem;font-weight:300;line-height:1.7}
+.wpp-btn{
+  display:inline-flex;align-items:center;gap:12px;
+  background:#25D366;color:#fff;padding:16px 28px;
+  text-decoration:none;font-size:0.78rem;font-weight:400;
+  letter-spacing:0.08em;text-transform:uppercase;transition:all 0.25s;
+}
+.wpp-btn:hover{background:#1fba57;transform:translateY(-2px);box-shadow:0 10px 30px rgba(37,211,102,0.25)}
+.wpp-btn svg{width:22px;height:22px;fill:#fff;flex-shrink:0}
+
+
+
+@media(max-width:768px){
+  .art-body{padding:50px 5vw 80px}
+  .art-cta{padding:2.5rem}
+.footer-top{grid-template-columns:1fr;gap:2.5rem}
+  .footer-bottom{flex-direction:column;gap:0.5rem;text-align:center}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .art-hero{padding:60px 5vw 50px}
+}
+</style>
+
+</head>
+<body>
+
+<nav id="navbar" class="art-nav">
+  <div class="nav-logo">
+    <a href="index.html"><img src="data:image/png;base64,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" alt="Amaral Gama — Sociedade Individual de Advocacia"></a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html#servicos">Serviços</a></li>
+    <li><a href="index.html#sobre">Sobre Dr. Bruno</a></li>
+    <li><a href="index.html#agendamento">Agendar</a></li>
+    <li><a href="index.html#blog">Conteúdo</a></li>
+    <li><a href="mukambu.html">Mukambu</a></li>
+    <li><a href="index.html#contato">Contato</a></li>
+    <li><a href="https://wa.me/5521971707910?text=Olá!+Vi+o+site+da+Amaral+Gama+e+gostaria+de+conversar+sobre+meu+caso." target="_blank" class="nav-cta">Agendar Consulta</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#servicos" onclick="closeMenu()">Serviços</a>
+  <a href="index.html#sobre" onclick="closeMenu()">Sobre Dr. Bruno</a>
+  <a href="index.html#agendamento" onclick="closeMenu()">Agendar Consulta</a>
+  <a href="index.html#blog" onclick="closeMenu()">Conteúdo</a>
+  <a href="mukambu.html" onclick="closeMenu()">Mukambu Carioca</a>
+  <a href="index.html#contato" onclick="closeMenu()">Contato</a>
+</div>
+
+<header class="art-hero">
+  <div class="art-tag">LGPD Condominial</div>
+  <h1>LGPD no condomínio: o que o síndico precisa fazer agora para evitar multa</h1>
+  <div class="art-meta">Por Dr. Bruno do Amaral Gama · OAB/RJ 154.455 · Abril de 2026</div>
+</header>
+
+<main class="art-body">
+  <p class="art-lead">A Lei Geral de Proteção de Dados se aplica a condomínios. Câmeras, cadastros de moradores, dados de funcionários — tudo isso é dado pessoal e deve ser tratado com regras claras. Saiba o que está em jogo e o que precisa mudar.</p>
+  
+<p>Muitos síndicos ainda acreditam que a LGPD é coisa de empresa grande, de banco, de plataforma digital. Não é. A Lei nº 13.709/2018 se aplica a qualquer pessoa física ou jurídica que colete, armazene, utilize ou compartilhe dados pessoais — e os condomínios fazem isso o tempo todo.</p>
+<p>Cadastros de moradores e visitantes, imagens de câmeras de segurança, dados de funcionários, planilhas de inadimplência, controle de acesso biométrico — cada um desses itens é dado pessoal sob a ótica da lei. E tratá-los sem as regras adequadas expõe o condomínio — e o síndico pessoalmente — a sanções da Autoridade Nacional de Proteção de Dados (ANPD).</p>
+
+<h2>O que a LGPD exige dos condomínios</h2>
+
+<h3>1. Mapear os dados coletados</h3>
+<p>O primeiro passo é entender quais dados pessoais o condomínio coleta e onde eles ficam armazenados. Isso inclui fichas de cadastro, registros de acesso, laudos de vistoria com dados de moradores e contratos com prestadores de serviço.</p>
+
+<h3>2. Ter uma base legal para cada tratamento</h3>
+<p>A LGPD exige que cada coleta de dado tenha uma justificativa legal — as chamadas "bases legais". Para condomínios, as mais utilizadas são o cumprimento de obrigação legal (folha de pagamento), legítimo interesse (câmeras em áreas comuns) e execução de contrato (cadastro de condôminos). Coletar dados sem base legal é uma das infrações mais comuns.</p>
+
+<h3>3. Câmeras de segurança: atenção redobrada</h3>
+<p>As imagens captadas pelas câmeras são dados pessoais quando permitem identificar pessoas. O condomínio deve informar claramente a existência das câmeras, delimitar as áreas monitoradas, definir por quanto tempo as imagens ficam armazenadas e quem tem acesso a elas.</p>
+
+<div class="callout">
+  <p><strong>Atenção:</strong> instalar câmeras em áreas que possam captar o interior de unidades privativas, mesmo que parcialmente, pode configurar violação de privacidade e gerar responsabilidade civil ao condomínio.</p>
+</div>
+
+<h3>4. Dados de funcionários e prestadores</h3>
+<p>CPF, RG, endereço, dados bancários, atestados médicos — tudo isso exige tratamento adequado. O condomínio deve garantir que apenas pessoas autorizadas acessem essas informações, que sejam usadas apenas para as finalidades declaradas e excluídas quando não forem mais necessárias.</p>
+
+<h3>5. Política de privacidade e conscientização</h3>
+<p>O condomínio precisa ter documentada sua política de tratamento de dados e comunicá-la a moradores, funcionários e prestadores. Não precisa ser um documento complexo — mas precisa existir, estar acessível e ser observado na prática.</p>
+
+<h2>Quais são as punições</h2>
+<p>A ANPD pode aplicar advertências, multas de até 2% do faturamento (limitado a R$ 50 milhões por infração), bloqueio ou eliminação dos dados tratados irregularmente e publicação da infração. Além das sanções administrativas, há o risco de ações civis movidas por moradores que se sintam prejudicados pelo uso indevido de seus dados.</p>
+
+<h2>Por onde começar</h2>
+<ul>
+  <li>Faça um levantamento de todos os dados pessoais que o condomínio coleta;</li>
+  <li>Revise o regulamento interno e a convenção — podem conter cláusulas incompatíveis com a LGPD;</li>
+  <li>Avalie os contratos com administradoras, portarias remotas e prestadores que acessam dados dos moradores;</li>
+  <li>Implemente avisos de privacidade nas áreas com câmeras;</li>
+  <li>Defina responsáveis pelo tratamento dos dados e crie procedimentos internos;</li>
+  <li>Consulte um advogado especialista para adequar os documentos do condomínio.</li>
+</ul>
+<p>A adequação à LGPD não é um evento único — é um processo contínuo. Mas começar pela organização básica já reduz significativamente a exposição do condomínio e do síndico a riscos desnecessários.</p>
+
+  <div class="art-cta">
+    <h3>Ficou com dúvidas sobre o seu caso?</h3>
+    <p>Seu condomínio ainda não se adequou à LGPD? Dr. Bruno orienta síndicos e administradoras no processo de conformidade.</p>
+    <a href="https://wa.me/5521971707910?text=Olá+Dr.+Bruno!+Li+o+artigo+e+gostaria+de+conversar+sobre+meu+caso." target="_blank" class="wpp-btn">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> Falar com Dr. Bruno
+    </a>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <p class="footer-desc">Amaral Gama — Sociedade Individual de Advocacia. Especializados em Direito Imobiliário e Condominial no Rio de Janeiro.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Serviços</h4>
+      <ul>
+        <li><a href="index.html#servicos">Raio-X Condominial</a></li>
+        <li><a href="index.html#servicos">Assessoria em Leilão</a></li>
+        <li><a href="index.html#servicos">Due Diligence Imobiliária</a></li>
+        <li><a href="index.html#servicos">Regularização de Imóveis</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="https://wa.me/5521971707910" target="_blank">WhatsApp: (21) 97170-7910</a></li>
+        <li><a href="mailto:contato@amaralgama.adv.br">contato@amaralgama.adv.br</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Redes Sociais</h4>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/amaralgama.adv/" target="_blank" rel="noopener" aria-label="Instagram" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+        <a href="https://www.youtube.com/@ablindagemimobiliaria" target="_blank" rel="noopener" aria-label="YouTube" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        <a href="https://www.linkedin.com/company/amaralgama/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="https://www.threads.com/@amaralgama.adv" target="_blank" rel="noopener" aria-label="Threads" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.96-.065-1.19.408-2.285 1.33-3.082.88-.762 2.097-1.204 3.426-1.244 1.09-.032 2.09.133 2.983.493-.012-.69-.092-1.32-.24-1.869-.336-1.24-1.03-1.856-2.062-1.83l-.005.001c-.93.025-1.606.378-2.008 1.05l-1.753-1.05c.671-1.12 1.758-1.768 3.217-1.92l.046-.003c.498-.036.994-.015 1.492.062 1.707.264 2.993 1.188 3.628 2.598.553 1.229.84 2.654.856 4.236l.004.26c.915.552 1.637 1.312 2.1 2.228.788 1.562.928 4.252-1.22 6.354-1.763 1.725-3.942 2.484-7.068 2.507zm-1.19-7.603c-.074 0-.148.003-.224.006-1.658.068-2.593.88-2.548 1.698.035.63.553 1.318 1.978 1.318.087 0 .177-.003.269-.01 1.876-.1 2.727-1.326 2.91-3.436-.748-.282-1.553-.44-2.386-.44v.864z"/></svg></a>
+        <a href="mailto:contato@amaralgama.adv.br" aria-label="E-mail" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 Amaral Gama — Sociedade Individual de Advocacia · OAB/RJ R8.000.676/2022</div>
+    <div class="footer-oab">Em conformidade com o Código de Ética e Disciplina da OAB</div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{
+  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>40);
+});
+function toggleMenu(){
+  const menu = document.getElementById('mobileMenu');
+  menu.classList.toggle('open');
+  document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+}
+function closeMenu(){
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.body.style.overflow = '';
+}
+window.scrollTo(0,0);
+</script>
+</body>
+</html>

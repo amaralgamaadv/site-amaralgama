@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Madureira — Coração do Subúrbio Carioca. Direito Imobiliário e Urbanístico no bairro que é berço da resistência negra e polo central da zona norte. Amaral Gama Advocacia.">
+<title>Madureira — Mukambu Carioca · Amaral Gama Advocacia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:#050704;--forest:#1E2A14;--forest-mid:#374D24;--forest-light:#4A5C35;
+  --gold:#A9800E;--gold-bright:#C9A84C;--gold-dark:#7A5C0A;--gold-pale:#EDE8D5;--gold-line:rgba(169,128,14,0.35);
+  --cream:#F1F0EE;--cream-dark:#E5E3DD;--white:#FFFFFF;
+  --text:#1E2A14;--text-soft:#5A6A45;
+  --ff-display:'Cormorant Garamond',Georgia,serif;
+  --ff-body:'Jost',sans-serif;
+  --nav-h:80px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--ff-body);color:var(--text);background:var(--cream);overflow-x:hidden}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-track{background:var(--forest)}
+::-webkit-scrollbar-thumb{background:var(--gold)}
+h1,h2,h3,h4,h5{font-family:var(--ff-display);line-height:1.1;letter-spacing:-0.01em}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;height:var(--nav-h);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 6vw;background:rgba(241,240,238,0.97);backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(169,128,14,0.18);transition:box-shadow 0.4s;
+}
+nav.scrolled{box-shadow:0 4px 40px rgba(30,42,20,0.12)}
+.nav-logo img{height:64px;display:block;object-fit:contain}
+.nav-links{display:flex;align-items:center;gap:2.2rem;list-style:none}
+.nav-links a{
+  color:var(--forest-mid);text-decoration:none;font-size:0.72rem;font-weight:400;
+  letter-spacing:0.14em;text-transform:uppercase;transition:color 0.2s;position:relative;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:-4px;left:0;right:0;height:1px;
+  background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform 0.3s;
+}
+.nav-links a:hover{color:var(--gold)}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-links a.active-nav{color:var(--gold);font-weight:500}
+.nav-links a.active-nav::after{transform:scaleX(1)}
+.nav-cta{
+  background:var(--forest)!important;color:var(--cream)!important;
+  padding:10px 22px!important;font-size:0.7rem!important;font-weight:400!important;
+  letter-spacing:0.12em!important;text-transform:uppercase!important;
+  transition:background 0.25s!important;border:none!important;
+}
+.nav-cta::after{display:none!important}
+.nav-cta:hover{background:var(--gold)!important;color:var(--forest)!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer}
+.hamburger span{width:26px;height:1px;background:var(--forest);transition:all 0.3s}
+.mobile-menu{
+  display:none;position:fixed;top:var(--nav-h);left:0;right:0;bottom:0;
+  background:var(--forest);z-index:199;padding:3rem 6vw;flex-direction:column;gap:0;
+}
+.mobile-menu.open{display:flex}
+.mobile-menu a{
+  color:rgba(241,240,238,0.8);text-decoration:none;font-family:var(--ff-display);
+  font-size:2.2rem;font-weight:300;padding:1rem 0;
+  border-bottom:1px solid rgba(169,128,14,0.12);transition:color 0.2s;
+}
+.mobile-menu a:hover{color:var(--gold-bright)}
+
+/* PAGE HERO */
+.page-hero{
+  min-height:55vh;display:flex;align-items:flex-end;
+  background:var(--forest);position:relative;overflow:hidden;
+  padding:8vh 6vw 6vh;padding-top:calc(var(--nav-h) + 4vh);
+}
+.page-hero::before{
+  content:'';position:absolute;inset:0;z-index:1;opacity:0.04;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:200px;
+}
+.page-hero::after{
+  content:'';position:absolute;right:-8%;top:-20%;width:500px;height:500px;
+  border:1px solid rgba(169,128,14,0.06);border-radius:50%;pointer-events:none;z-index:1;
+}
+.page-hero-content{position:relative;z-index:2;max-width:740px}
+.page-hero .s-label{
+  display:inline-flex;align-items:center;gap:12px;color:var(--gold);
+  font-size:0.67rem;letter-spacing:0.22em;text-transform:uppercase;
+  font-weight:400;margin-bottom:1.5rem;
+}
+.page-hero .s-label::before{content:'';width:28px;height:1px;background:var(--gold)}
+.page-hero h1{
+  font-size:clamp(2.4rem,4.5vw,4rem);font-weight:300;color:var(--white);
+  line-height:1.08;margin-bottom:1.5rem;
+}
+.page-hero h1 em{font-style:italic;color:var(--gold-bright);font-weight:300}
+.page-hero .hero-sub{
+  font-size:0.95rem;color:rgba(241,240,238,0.55);line-height:1.85;
+  max-width:580px;font-weight:300;
+}
+.page-hero .hero-breadcrumb{
+  margin-top:2rem;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;
+}
+.page-hero .hero-breadcrumb a{color:var(--gold);text-decoration:none;transition:opacity 0.2s}
+.page-hero .hero-breadcrumb a:hover{opacity:0.7}
+.page-hero .hero-breadcrumb span{color:rgba(241,240,238,0.3);margin:0 8px}
+
+/* SECTIONS */
+section{padding:80px 6vw}
+.section-inner{max-width:900px;margin:0 auto}
+.s-label{
+  display:inline-flex;align-items:center;gap:12px;font-size:0.67rem;
+  letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);
+  font-weight:400;margin-bottom:1.2rem;
+}
+.s-label::before{content:'';width:28px;height:1px;background:var(--gold)}
+.s-title{font-size:clamp(2rem,3.5vw,3rem);font-weight:300;color:var(--forest)}
+.s-title em{font-style:italic;color:var(--gold)}
+.gold-rule{width:44px;height:1px;background:var(--gold);margin:1.8rem 0}
+
+/* PROSE */
+.prose p{
+  font-size:0.94rem;color:var(--text-soft);line-height:1.9;font-weight:300;margin-bottom:1.2rem;
+}
+.prose strong{color:var(--forest);font-weight:500}
+.prose em{color:var(--gold);font-style:italic}
+
+/* TOPIC CARDS */
+.topic-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:1px;
+  background:rgba(30,42,20,0.08);margin:3rem 0;
+}
+.topic-card{
+  background:var(--cream);padding:2.2rem 2rem;
+  position:relative;overflow:hidden;transition:background 0.3s;
+}
+.topic-card::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:2px;
+  background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform 0.5s;
+}
+.topic-card:hover::after{transform:scaleX(1)}
+.topic-card:hover{background:var(--gold-pale)}
+.topic-icon{
+  font-family:var(--ff-display);font-size:1.8rem;color:var(--gold);
+  font-weight:300;margin-bottom:1rem;line-height:1;
+}
+.topic-card h3{
+  font-family:var(--ff-display);font-size:1.15rem;font-weight:400;
+  color:var(--forest);margin-bottom:0.6rem;
+}
+.topic-card p{
+  font-size:0.85rem;color:var(--text-soft);line-height:1.8;font-weight:300;
+}
+
+/* HIGHLIGHT BLOCK */
+.highlight-block{
+  background:var(--cream-dark);border-left:2px solid var(--gold);
+  padding:2rem 2.5rem;margin:2.5rem 0;
+}
+.highlight-block h3{
+  font-family:var(--ff-display);font-size:1.2rem;font-weight:400;
+  color:var(--forest);margin-bottom:0.8rem;
+}
+.highlight-block p{
+  font-size:0.9rem;color:var(--text-soft);line-height:1.85;font-weight:300;margin:0;
+}
+.highlight-block strong{color:var(--forest);font-weight:500}
+
+/* CTA SECTION */
+.cta-section{
+  background:var(--forest);padding:4.5rem 6vw;text-align:center;
+  position:relative;overflow:hidden;
+}
+.cta-section::after{
+  content:'';position:absolute;right:-8%;top:-30%;width:400px;height:400px;
+  border:1px solid rgba(169,128,14,0.06);border-radius:50%;pointer-events:none;
+}
+.cta-section h2{
+  font-family:var(--ff-display);font-size:clamp(1.8rem,3vw,2.5rem);font-weight:300;
+  color:var(--white);margin-bottom:1rem;position:relative;z-index:2;
+}
+.cta-section p{
+  font-size:0.92rem;color:rgba(241,240,238,0.5);margin-bottom:2.5rem;
+  font-weight:300;line-height:1.8;max-width:600px;margin-left:auto;margin-right:auto;
+  position:relative;z-index:2;
+}
+.wpp-btn{
+  display:inline-flex;align-items:center;gap:12px;
+  background:#25D366;color:#fff;padding:16px 28px;
+  text-decoration:none;font-size:0.78rem;font-weight:400;
+  letter-spacing:0.08em;text-transform:uppercase;transition:all 0.25s;
+  position:relative;z-index:2;
+}
+.wpp-btn:hover{background:#1fba57;transform:translateY(-2px);box-shadow:0 10px 30px rgba(37,211,102,0.25)}
+.wpp-btn svg{width:22px;height:22px;fill:#fff;flex-shrink:0}
+
+/* BACK LINK */
+.back-link{
+  display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;
+  color:var(--gold);letter-spacing:0.1em;text-transform:uppercase;
+  text-decoration:none;transition:gap 0.2s;
+}
+.back-link:hover{gap:14px}
+
+/* FOOTER */
+footer{background:var(--ink);padding:70px 6vw 30px}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:4rem;margin-bottom:4rem;padding-bottom:4rem;border-bottom:1px solid rgba(255,255,255,0.06)}
+.footer-brand img{height:32px;margin-bottom:1.5rem;filter:brightness(0) invert(1) opacity(0.55);display:block}
+.footer-desc{font-size:0.83rem;color:rgba(255,255,255,0.3);line-height:1.85;font-weight:300;max-width:320px}
+.footer-col h4{font-family:var(--ff-display);font-size:1rem;font-weight:400;color:rgba(255,255,255,0.5);margin-bottom:1.4rem}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:0.7rem}
+.footer-col ul li a{font-size:0.82rem;color:rgba(255,255,255,0.3);text-decoration:none;font-weight:300;transition:color 0.2s}
+.footer-col ul li a:hover{color:var(--gold)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center}
+.footer-copy,.footer-oab{font-size:0.68rem;color:rgba(255,255,255,0.2);font-weight:300;letter-spacing:0.04em}
+.footer-social{display:flex;gap:1rem;margin-top:0.5rem;flex-wrap:wrap}
+.social-link{
+  width:38px;height:38px;display:flex;align-items:center;justify-content:center;
+  border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.4);transition:all 0.3s;
+}
+.social-link svg{width:18px;height:18px}
+.social-link:hover{border-color:var(--gold);color:var(--gold);background:rgba(169,128,14,0.08);transform:translateY(-2px)}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s,transform 0.7s}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-d1{transition-delay:0.15s}
+.reveal-d2{transition-delay:0.3s}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+@media(max-width:960px){
+  .topic-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr;gap:2.5rem}
+  .footer-bottom{flex-direction:column;gap:0.5rem;text-align:center}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .page-hero h1{font-size:clamp(2rem,8vw,3.2rem)}
+}
+@media(max-width:600px){
+  section{padding:60px 5vw}
+  .cta-section{padding:3rem 5vw}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-logo">
+    <a href="index.html"><img src="data:image/png;base64,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" alt="Amaral Gama — Sociedade Individual de Advocacia"></a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html#servicos">Serviços</a></li>
+    <li><a href="index.html#sobre">Sobre Dr. Bruno</a></li>
+    <li><a href="index.html#agendamento">Agendar</a></li>
+    <li><a href="index.html#blog">Conteúdo</a></li>
+    <li><a href="mukambu.html" class="active-nav">Mukambu</a></li>
+    <li><a href="index.html#contato">Contato</a></li>
+    <li><a href="https://wa.me/5521971707910?text=Olá!+Vi+o+site+da+Amaral+Gama+e+gostaria+de+conversar+sobre+meu+caso." target="_blank" class="nav-cta">Agendar Consulta</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#servicos" onclick="closeMenu()">Serviços</a>
+  <a href="index.html#sobre" onclick="closeMenu()">Sobre Dr. Bruno</a>
+  <a href="index.html#agendamento" onclick="closeMenu()">Agendar Consulta</a>
+  <a href="index.html#blog" onclick="closeMenu()">Conteúdo</a>
+  <a href="mukambu.html" onclick="closeMenu()">Mukambu Carioca</a>
+  <a href="index.html#contato" onclick="closeMenu()">Contato</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="page-hero-content" style="animation:fadeUp 0.8s ease-out">
+    <span class="s-label">Mukambu Carioca · Bairro</span>
+    <h1>Madureira — coração do <em>subúrbio carioca</em></h1>
+    <p class="hero-sub">Berço da resistência negra, polo comercial da zona norte e epicentro de uma cultura urbana que moldou a identidade do Rio de Janeiro. Um bairro central que ainda carece de orientação jurídica especializada em Direito Imobiliário.</p>
+    <div class="hero-breadcrumb">
+      <a href="index.html">Início</a><span>›</span>
+      <a href="mukambu.html">Mukambu Carioca</a><span>›</span>
+      <a href="madureira.html" style="opacity:0.5">Madureira</a>
+    </div>
+  </div>
+</div>
+
+<!-- CENTRALIDADE DE MADUREIRA -->
+<section style="background:var(--white)">
+  <div class="section-inner">
+    <div class="reveal">
+      <span class="s-label">Centralidade</span>
+      <h2 class="s-title">O polo que organiza o <em>subúrbio</em></h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="prose reveal reveal-d1">
+      <p>Madureira não é apenas um bairro — é o <strong>centro gravitacional do subúrbio carioca</strong>. Dos ramais ferroviários que cortam a zona norte aos eixos viários que conectam dezenas de comunidades, tudo converge para Madureira. É aqui que se concentra o maior volume de comércio popular fora do centro da cidade, com o <strong>Mercadão de Madureira</strong> e o <strong>CADEG da zona norte</strong> funcionando como verdadeiras instituições econômicas locais.</p>
+      <p>Essa centralidade não é acidental. Madureira se consolidou historicamente como ponto de encontro, de troca e de resistência. É o bairro onde a <strong>linha férrea da Central do Brasil</strong> cruza com a linha de Belford Roxo, formando um nó logístico que transformou a região em passagem obrigatória para milhões de cariocas — e, consequentemente, em polo de serviços, cultura e moradia.</p>
+      <p>Com essa densidade, vieram os desafios: <strong>loteamentos irregulares, construções sem habite-se, imóveis herdados sem inventário, condomínios informais</strong> e um mercado imobiliário que cresce à margem da formalidade jurídica. Madureira é, ao mesmo tempo, o motor econômico do subúrbio e um território com profundas lacunas em orientação jurídica imobiliária.</p>
+    </div>
+  </div>
+</section>
+
+<!-- RESISTÊNCIA NEGRA -->
+<section style="background:var(--cream)">
+  <div class="section-inner">
+    <div class="reveal">
+      <span class="s-label">Identidade e Resistência</span>
+      <h2 class="s-title">Berço da <em>resistência negra</em> carioca</h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="prose reveal reveal-d1">
+      <p>Madureira é, antes de tudo, <strong>território negro</strong>. Foi aqui que nasceram e se consolidaram algumas das expressões culturais mais potentes do Brasil: o <strong>samba de terreiro</strong>, o <strong>jongo</strong>, as rodas de partido alto, o <strong>candomblé</strong> e as escolas de samba que definem a identidade do carnaval carioca. A <strong>Portela</strong> e o <strong>Império Serrano</strong> — duas das maiores agremiações da história — têm suas raízes fincadas neste solo.</p>
+      <p>O <strong>Parque de Madureira</strong>, inaugurado como o maior parque público da zona norte, é símbolo dessa resistência: um espaço arrancado ao descaso urbano que se tornou palco de cultura, lazer e convivência. As quadras das escolas de samba, os terreiros religiosos, as feiras afro e os blocos de rua compõem um ecossistema cultural que nenhum outro bairro do Rio reproduz com a mesma intensidade.</p>
+      <p>Essa herança afro-brasileira está diretamente ligada à questão fundiária. Muitas famílias negras de Madureira <strong>ocupam seus imóveis há gerações</strong>, frequentemente sem documentação formal, sem registro em cartório, sem inventário concluído. A história de resistência que construiu o bairro é, também, a história de um <strong>patrimônio imobiliário invisível</strong> — presente na vida, mas ausente nos registros.</p>
+    </div>
+
+    <div class="highlight-block reveal reveal-d2">
+      <h3>Patrimônio sem registro</h3>
+      <p>Estima-se que <strong>mais de 40% dos imóveis no Brasil</strong> possuam alguma irregularidade fundiária. Em bairros como Madureira, onde a ocupação remonta a décadas de informalidade, esse percentual tende a ser ainda maior. Regularizar não é apenas uma questão burocrática — é <strong>garantir que a história dessas famílias seja reconhecida pelo Direito</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- AUSÊNCIA DE ASSOCIAÇÃO -->
+<section style="background:var(--white)">
+  <div class="section-inner">
+    <div class="reveal">
+      <span class="s-label">A Lacuna Jurídica</span>
+      <h2 class="s-title">Onde está a orientação em <em>Direito Imobiliário</em>?</h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="prose reveal reveal-d1">
+      <p>Madureira concentra <strong>milhares de condomínios, edifícios residenciais, vilas e conjuntos habitacionais</strong>. No entanto, diferente do que se observa em bairros da zona sul e da Barra da Tijuca, <strong>não existe no subúrbio uma Associação de Condomínios ou Instituição dedicada a instruir e orientar sobre Direito Imobiliário e Condominial</strong>.</p>
+      <p>Essa ausência tem consequências concretas. Síndicos administram condomínios sem conhecer seus direitos e obrigações legais. Moradores enfrentam problemas de infiltração, obras irregulares, cobrança abusiva de taxas — e não sabem a quem recorrer. Proprietários deixam de regularizar imóveis herdados por desconhecimento do caminho jurídico. Investidores arrematam em leilão sem due diligence adequada.</p>
+      <p>O resultado é um <strong>vácuo de informação jurídica</strong> que afeta diretamente o patrimônio e a qualidade de vida de milhares de famílias. Enquanto outros bairros contam com associações, núcleos de prática jurídica e escritórios especializados acessíveis, Madureira — o maior polo do subúrbio — permanece desassistido nesse aspecto.</p>
+    </div>
+
+    <div class="topic-grid reveal">
+      <div class="topic-card">
+        <div class="topic-icon">01</div>
+        <h3>Condomínios sem orientação</h3>
+        <p>Síndicos e administradoras operam sem acesso a consultoria especializada em Direito Condominial, expondo o condomínio a riscos jurídicos e financeiros evitáveis.</p>
+      </div>
+      <div class="topic-card">
+        <div class="topic-icon">02</div>
+        <h3>Imóveis irregulares</h3>
+        <p>Construções sem habite-se, loteamentos não registrados e imóveis herdados sem inventário formam um passivo fundiário que cresce a cada geração.</p>
+      </div>
+      <div class="topic-card">
+        <div class="topic-icon">03</div>
+        <h3>Mercado informal</h3>
+        <p>Contratos de gaveta, cessões de posse sem escritura e compra e venda sem registro dominam o mercado local — deixando compradores e vendedores vulneráveis.</p>
+      </div>
+      <div class="topic-card">
+        <div class="topic-icon">04</div>
+        <h3>Ausência institucional</h3>
+        <p>Não há no subúrbio carioca uma Associação de Condomínios ou entidade que promova educação e orientação continuada em Direito Imobiliário e Urbanístico.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAPEL DO PROJETO MUKAMBU -->
+<section style="background:var(--cream-dark)">
+  <div class="section-inner">
+    <div class="reveal">
+      <span class="s-label">Projeto Mukambu Carioca</span>
+      <h2 class="s-title">Levar o Direito Imobiliário ao <em>subúrbio</em></h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="prose reveal reveal-d1">
+      <p>O <strong>Projeto Mukambu Carioca</strong> — metáfora criada para designar o Subúrbio do Rio de Janeiro, refletindo o refúgio negro da Cidade — nasce justamente para preencher essa lacuna. Começamos por Madureira porque é aqui que a demanda é mais urgente e a centralidade do bairro permite irradiar conhecimento para toda a zona norte.</p>
+      <p>O projeto atua em três frentes: <strong>produção de conteúdo jurídico acessível</strong> sobre questões imobiliárias locais; <strong>assessoria especializada</strong> em regularização fundiária, usucapião, leilão judicial e direito condominial; e <strong>mapeamento jurídico-urbanístico</strong> dos bairros do subúrbio, criando um diagnóstico inédito das questões fundiárias de cada localidade.</p>
+      <p>Madureira merece um olhar jurídico à altura da sua importância. O patrimônio construído por gerações de famílias — muitas delas negras, todas elas suburbanas — precisa ser reconhecido, protegido e regularizado. Esse é o compromisso do Projeto Mukambu Carioca e da <strong>Amaral Gama — Sociedade Individual de Advocacia</strong>.</p>
+    </div>
+
+    <div style="margin-top:2rem" class="reveal reveal-d2">
+      <a href="mukambu.html" class="back-link">← Voltar ao Mukambu Carioca</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Madureira precisa de orientação jurídica especializada</h2>
+  <p>Tem um imóvel em Madureira? Problema no condomínio? Herança sem inventário? Dr. Bruno do Amaral Gama atende a zona norte com foco exclusivo em Direito Imobiliário e Condominial.</p>
+  <a href="https://wa.me/5521971707910?text=Olá+Dr.+Bruno!+Sou+de+Madureira+e+gostaria+de+conversar+sobre+meu+caso+imobiliário." target="_blank" class="wpp-btn">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    Falar com Dr. Bruno
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <p class="footer-desc">Amaral Gama — Sociedade Individual de Advocacia. Especializados em Direito Imobiliário e Condominial no Rio de Janeiro.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="https://wa.me/5521971707910" target="_blank">WhatsApp: (21) 97170-7910</a></li>
+        <li><a href="mailto:contato@amaralgama.adv.br">contato@amaralgama.adv.br</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Redes Sociais</h4>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/amaralgama.adv/" target="_blank" rel="noopener" aria-label="Instagram" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+        <a href="https://www.youtube.com/@ablindagemimobiliaria" target="_blank" rel="noopener" aria-label="YouTube" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        <a href="https://www.linkedin.com/company/amaralgama/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="https://www.threads.com/@amaralgama.adv" target="_blank" rel="noopener" aria-label="Threads" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.96-.065-1.19.408-2.285 1.33-3.082.88-.762 2.097-1.204 3.426-1.244 1.09-.032 2.09.133 2.983.493-.012-.69-.092-1.32-.24-1.869-.336-1.24-1.03-1.856-2.062-1.83l-.005.001c-.93.025-1.606.378-2.008 1.05l-1.753-1.05c.671-1.12 1.758-1.768 3.217-1.92l.046-.003c.498-.036.994-.015 1.492.062 1.707.264 2.993 1.188 3.628 2.598.553 1.229.84 2.654.856 4.236l.004.26c.915.552 1.637 1.312 2.1 2.228.788 1.562.928 4.252-1.22 6.354-1.763 1.725-3.942 2.484-7.068 2.507zm-1.19-7.603c-.074 0-.148.003-.224.006-1.658.068-2.593.88-2.548 1.698.035.63.553 1.318 1.978 1.318.087 0 .177-.003.269-.01 1.876-.1 2.727-1.326 2.91-3.436-.748-.282-1.553-.44-2.386-.44v.864z"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 Amaral Gama — Sociedade Individual de Advocacia · OAB/RJ R8.000.676/2022</div>
+    <div class="footer-oab">Em conformidade com o Código de Ética e Disciplina da OAB</div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{
+  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>40);
+});
+function toggleMenu(){
+  const menu = document.getElementById('mobileMenu');
+  menu.classList.toggle('open');
+  document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+}
+function closeMenu(){
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.body.style.overflow = '';
+}
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+  });
+}, { threshold: 0.12 });
+reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Compromissos da Amaral Gama Advocacia — Empregabilidade Afirmativa, Dignidade, Democratização e Presença Protetora.">
+<title>Compromissos — Amaral Gama Advocacia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:#050704;--forest:#1E2A14;--forest-mid:#374D24;--forest-light:#4A5C35;
+  --gold:#A9800E;--gold-bright:#C9A84C;--gold-pale:#EDE8D5;--gold-line:rgba(169,128,14,0.35);
+  --cream:#F1F0EE;--cream-dark:#E5E3DD;--white:#FFFFFF;--text:#1E2A14;--gold-dark:#7A5C0A;
+  --ff-display:'Cormorant Garamond',Georgia,serif;
+  --ff-body:'Jost','Helvetica Neue',Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--ff-body);background:var(--cream);color:var(--text);font-weight:300;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+
+/* NAV */
+:root{--nav-h:80px}
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;height:var(--nav-h);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 6vw;background:rgba(241,240,238,0.97);backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(169,128,14,0.18);transition:box-shadow 0.4s;
+}
+nav.scrolled{box-shadow:0 4px 40px rgba(30,42,20,0.12)}
+.nav-logo img{height:64px;display:block;object-fit:contain}
+.nav-links{display:flex;align-items:center;gap:2.2rem;list-style:none}
+.nav-links a{
+  color:var(--forest-mid);text-decoration:none;font-size:0.72rem;font-weight:400;
+  letter-spacing:0.14em;text-transform:uppercase;transition:color 0.2s;position:relative;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:-4px;left:0;right:0;height:1px;
+  background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform 0.3s;
+}
+.nav-links a:hover{color:var(--gold)}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-links a.active-nav{color:var(--gold);font-weight:500}
+.nav-links a.active-nav::after{transform:scaleX(1)}
+.nav-cta{
+  background:var(--forest)!important;color:var(--cream)!important;
+  padding:10px 22px!important;font-size:0.7rem!important;font-weight:400!important;
+  letter-spacing:0.12em!important;text-transform:uppercase!important;
+  transition:background 0.25s!important;border:none!important;
+}
+.nav-cta::after{display:none!important}
+.nav-cta:hover{background:var(--gold)!important;color:var(--forest)!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer}
+.hamburger span{width:26px;height:1px;background:var(--forest);transition:all 0.3s}
+.mobile-menu{
+  display:none;position:fixed;top:var(--nav-h);left:0;right:0;bottom:0;
+  background:var(--forest);z-index:199;padding:3rem 6vw;flex-direction:column;gap:0;
+}
+.mobile-menu.open{display:flex}
+.mobile-menu a{
+  color:rgba(241,240,238,0.8);text-decoration:none;font-family:var(--ff-display);
+  font-size:2.2rem;font-weight:300;padding:1rem 0;
+  border-bottom:1px solid rgba(169,128,14,0.12);transition:color 0.2s;
+}
+.mobile-menu a:hover{color:var(--gold-bright)}
+@media(max-width:900px){.nav-links{display:none}.hamburger{display:flex}}
+
+/* HERO */
+.page-hero{padding:180px 6vw 80px;background:var(--forest);text-align:center;position:relative}
+.page-hero::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:1px;height:60px;background:linear-gradient(to bottom,var(--gold),transparent)}
+.page-hero .eyebrow{font-family:var(--ff-body);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.35em;color:var(--gold);font-weight:400;margin-bottom:1.5rem}
+.page-hero h1{font-family:var(--ff-display);font-size:clamp(2rem,4.5vw,3.5rem);color:var(--cream);font-weight:300;line-height:1.25;margin-bottom:1.5rem}
+.page-hero h1 em{font-style:italic;color:var(--gold)}
+.page-hero .subtitle{font-size:0.95rem;color:rgba(241,240,238,0.5);line-height:1.85;max-width:680px;margin:0 auto;font-weight:300}
+
+/* COMPROMISSOS */
+.compromissos-section{padding:100px 6vw}
+.compromisso-block{max-width:900px;margin:0 auto 80px;position:relative;padding-left:0}
+.compromisso-block:last-child{margin-bottom:0}
+.compromisso-number{font-family:var(--ff-display);font-size:3rem;color:var(--gold);opacity:0.12;font-weight:300;line-height:1;margin-bottom:8px;display:block}
+.compromisso-badge{display:inline-block;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.25em;color:var(--gold);border:1px solid var(--gold-line);padding:6px 16px;margin-bottom:1.2rem;font-weight:400}
+.compromisso-title{font-family:var(--ff-display);font-size:clamp(1.4rem,2.5vw,1.9rem);color:var(--forest);font-weight:400;margin-bottom:0.5rem;line-height:1.3}
+.compromisso-subtitle{font-family:var(--ff-display);font-size:1rem;color:var(--gold-dark);font-style:italic;font-weight:300;margin-bottom:1.5rem}
+.compromisso-conceito{font-size:0.92rem;color:var(--text);line-height:1.9;font-weight:300;margin-bottom:2rem;padding-left:20px;border-left:2px solid var(--gold-line)}
+.compromisso-regras h4{font-family:var(--ff-body);font-size:0.75rem;text-transform:uppercase;letter-spacing:0.2em;color:var(--forest-mid);margin-bottom:1rem;font-weight:500}
+.regra-item{display:flex;gap:16px;margin-bottom:1.2rem;padding:16px 20px;background:var(--white);border-left:3px solid var(--gold);transition:all 0.3s}
+.regra-item:hover{box-shadow:0 4px 20px rgba(0,0,0,0.06);transform:translateX(4px)}
+.regra-num{font-family:var(--ff-display);font-size:1.4rem;color:var(--gold);font-weight:400;min-width:24px}
+.regra-content{flex:1}
+.regra-content strong{font-weight:500;color:var(--forest);display:block;margin-bottom:4px;font-size:0.85rem}
+.regra-content p{font-size:0.83rem;color:rgba(30,42,20,0.7);line-height:1.75;font-weight:300}
+
+/* DIVIDER */
+.section-divider{width:40px;height:1px;background:var(--gold-line);margin:0 auto 80px}
+
+/* FOOTER */
+footer{background:var(--ink);padding:70px 6vw 30px}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:3rem;margin-bottom:4rem;padding-bottom:4rem;border-bottom:1px solid rgba(255,255,255,0.06)}
+.footer-brand img{height:48px;margin-bottom:1.5rem;opacity:0.7;display:block}
+.footer-desc{font-size:0.83rem;color:rgba(255,255,255,0.3);line-height:1.85;font-weight:300;max-width:320px}
+.footer-col h4{font-family:var(--ff-display);font-size:1rem;font-weight:400;color:rgba(255,255,255,0.5);margin-bottom:1.4rem}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:0.7rem}
+.footer-col ul li a{font-size:0.82rem;color:rgba(255,255,255,0.3);text-decoration:none;font-weight:300;transition:color 0.2s}
+.footer-col ul li a:hover{color:var(--gold)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center}
+.footer-copy,.footer-oab{font-size:0.68rem;color:rgba(255,255,255,0.2);font-weight:300;letter-spacing:0.04em}
+.footer-social{display:flex;gap:1rem;margin-top:0.5rem;flex-wrap:wrap}
+.social-link{width:32px;height:32px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.08);color:rgba(255,255,255,0.3);transition:all 0.3s}
+.social-link:hover{border-color:var(--gold);color:var(--gold)}
+.social-link svg{width:14px;height:14px}
+@media(max-width:900px){.footer-top{grid-template-columns:1fr}.footer-bottom{flex-direction:column;gap:0.5rem;text-align:center}}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.8s,transform 0.8s}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-d1{transition-delay:0.15s}
+.reveal-d2{transition-delay:0.3s}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-logo">
+    <img src="data:image/png;base64,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" alt="Amaral Gama — Sociedade Individual de Advocacia">
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html#servicos">Serviços</a></li>
+    <li><a href="index.html#sobre">Sobre Dr. Bruno</a></li>
+    <li><a href="index.html#agendamento">Agendar</a></li>
+    <li><a href="index.html#blog">Conteúdo</a></li>
+    <li><a href="mukambu.html">Mukambu</a></li>
+    <li><a href="compromissos.html" class="active-nav">Compromissos</a></li>
+    <li><a href="index.html#contato">Contato</a></li>
+    <li><a href="https://wa.me/5521971707910?text=Olá!+Vi+o+site+da+Amaral+Gama+e+gostaria+de+conversar+sobre+meu+caso." target="_blank" class="nav-cta">Agendar Consulta</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#servicos" onclick="closeMenu()">Serviços</a>
+  <a href="index.html#sobre" onclick="closeMenu()">Sobre Dr. Bruno</a>
+  <a href="index.html#agendamento" onclick="closeMenu()">Agendar Consulta</a>
+  <a href="index.html#blog" onclick="closeMenu()">Conteúdo</a>
+  <a href="mukambu.html" onclick="closeMenu()">Mukambu Carioca</a>
+  <a href="compromissos.html" onclick="closeMenu()">Compromissos</a>
+  <a href="index.html#contato" onclick="closeMenu()">Contato</a>
+</div>
+
+<section class="page-hero">
+  <span class="eyebrow">Nossos compromissos</span>
+  <h1>Pela graça de Deus,<br>cada um merece <em>proteção e dignidade.</em></h1>
+  <p class="subtitle">Estes não são valores de parede. São regras de operação — compromissos públicos que orientam cada decisão da Amaral Gama, do processo seletivo ao pós-causa.</p>
+</section>
+
+<section class="compromissos-section">
+
+  <div class="compromisso-block reveal">
+    <span class="compromisso-number">01</span>
+    <span class="compromisso-badge">Empregabilidade Afirmativa</span>
+    <h2 class="compromisso-title">Pacto de Empregabilidade Afirmativa</h2>
+    <h3 class="compromisso-subtitle">"O Ciclo do Mukambu"</h3>
+    <div class="compromisso-conceito">
+      A Amaral Gama não apenas contrata — ela forma lideranças. Este compromisso visa quebrar o teto de vidro do mercado jurídico para talentos negros, garantindo que a excelência técnica tenha cor e origem suburbana.
+    </div>
+    <div class="compromisso-regras">
+      <h4>Regras de desenvolvimento</h4>
+      <div class="regra-item">
+        <span class="regra-num">1</span>
+        <div class="regra-content">
+          <strong>Prioridade na base</strong>
+          <p>Em processos seletivos para estágio e posições júnior, 70% das vagas são destinadas a pessoas negras e residentes das periferias do Rio de Janeiro.</p>
+        </div>
+      </div>
+      <div class="regra-item">
+        <span class="regra-num">2</span>
+        <div class="regra-content">
+          <strong>Trilha de ascensão</strong>
+          <p>Todo colaborador vindo de ações afirmativas terá um Plano de Desenvolvimento Individual (PDI) focado em torná-lo sócio ou líder de área em até 5 anos.</p>
+        </div>
+      </div>
+      <div class="regra-item">
+        <span class="regra-num">3</span>
+        <div class="regra-content">
+          <strong>Cláusula de pertencimento</strong>
+          <p>O ambiente de trabalho deve respeitar e valorizar a estética e a cultura negra — cabelo, vestimenta, religiosidade — sem exigências de "padronização" eurocêntrica.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <div class="compromisso-block reveal">
+    <span class="compromisso-number">02</span>
+    <span class="compromisso-badge">Fomento ao ecossistema suburbano</span>
+    <h2 class="compromisso-title">Dia da Dignidade e Proteção</h2>
+    <div class="compromisso-conceito">
+      Um evento anual de impacto em locais de afirmação — Parque Madureira, Portela ou Império Serrano — levando consultoria gratuita para quem mais precisa, sob o manto do símbolo Nyame Nti.
+    </div>
+    <div class="compromisso-regras">
+      <h4>Regras de desenvolvimento</h4>
+      <div class="regra-item">
+        <span class="regra-num">1</span>
+        <div class="regra-content">
+          <strong>Localização simbólica</strong>
+          <p>O evento ocorrerá obrigatoriamente em solo de resistência cultural.</p>
+        </div>
+      </div>
+      <div class="regra-item">
+        <span class="regra-num">2</span>
+        <div class="regra-content">
+          <strong>Consultoria raiz</strong>
+          <p>O foco será em questões críticas para a dignidade: regularização de posse, direitos do consumidor e dúvidas imobiliárias básicas.</p>
+        </div>
+      </div>
+      <div class="regra-item">
+        <span class="regra-num">3</span>
+        <div class="regra-content">
+          <strong>Triagem e encaminhamento</strong>
+          <p>Casos que exijam ação judicial serão encaminhados à Defensoria Pública ou assumidos como pro bono pelo escritório, garantindo que a pessoa não saia apenas com uma orientação, mas com um caminho.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <div class="compromisso-block reveal">
+    <span class="compromisso-number">03</span>
+    <span class="compromisso-badge">Democratização do conhecimento</span>
+    <h2 class="compromisso-title">Programa de Democratização da Informação Patrimonial</h2>
+    <div class="compromisso-conceito">
+      O conhecimento jurídico não pode ser um segredo guardado por poucos. Este compromisso visa traduzir o Direito para que o morador do subúrbio seja dono das suas decisões.
+    </div>
+    <div class="compromisso-regras">
+      <h4>Regras de desenvolvimento</h4>
+      <div class="regra-item">
+        <span class="regra-num">1</span>
+        <div class="regra-content">
+          <strong>Glossário da clareza</strong>
+          <p>Toda petição ou contrato deve ser acompanhado de um "Resumo de Proteção" em linguagem clara (Visual Law), explicando os riscos e ganhos sem juridiquês.</p>
+        </div>
+      </div>
+      <div class="regra-item">
+        <span class="regra-num">2</span>
+        <div class="regra-content">
+          <strong>Ciclo de palestras</strong>
+          <p>Realização de 4 workshops gratuitos por ano — online ou presenciais em Madureira — sobre "Como comprar sua casa sem ser enganado" e "Direitos do inquilino e do proprietário no subúrbio".</p>
+        </div>
+      </div>
+      <div class="regra-item">
+        <span class="regra-num">3</span>
+        <div class="regra-content">
+          <strong>Conteúdo aberto</strong>
+          <p>Produção semanal de vídeos curtos nas redes sociais educando sobre segurança jurídica imobiliária para a classe média trabalhadora.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="data:image/png;base64,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" alt="">
+      <p class="footer-desc">Especializados em Direito Imobiliário e Condominial no Rio de Janeiro. Autoridade técnica e entrega que o mercado de médio porte precisa.</p>
+      <p style="font-family:var(--ff-display);font-size:0.9rem;color:var(--gold);font-style:italic;margin-top:1rem;font-weight:300;opacity:0.7">"A Blindagem Jurídica do Seu Patrimônio Imobiliário"</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="index.html#servicos">Serviços</a></li>
+        <li><a href="index.html#sobre">Sobre</a></li>
+        <li><a href="mukambu.html">Mukambu Carioca</a></li>
+        <li><a href="compromissos.html">Compromissos</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="https://wa.me/5521971707910" target="_blank">WhatsApp: (21) 97170-7910</a></li>
+        <li><a href="mailto:contato@amaralgama.adv.br">contato@amaralgama.adv.br</a></li>
+        <li><a href="index.html#contato">Rua Soares Caldeira, 142 — Sala 1001 — Madureira/RJ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Redes Sociais</h4>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/amaralgama.adv/" target="_blank" rel="noopener" aria-label="Instagram" class="social-link">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@ablindagemimobiliaria" target="_blank" rel="noopener" aria-label="YouTube" class="social-link">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/amaralgama/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://www.threads.com/@amaralgama.adv" target="_blank" rel="noopener" aria-label="Threads" class="social-link">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.96-.065-1.19.408-2.285 1.33-3.082.88-.762 2.097-1.204 3.426-1.244 1.09-.032 2.09.133 2.983.493-.012-.69-.092-1.32-.24-1.869-.336-1.24-1.03-1.856-2.062-1.83l-.005.001c-.93.025-1.606.378-2.008 1.05l-1.753-1.05c.671-1.12 1.758-1.768 3.217-1.92l.046-.003c.498-.036.994-.015 1.492.062 1.707.264 2.993 1.188 3.628 2.598.553 1.229.84 2.654.856 4.236l.004.26c.915.552 1.637 1.312 2.1 2.228.788 1.562.928 4.252-1.22 6.354-1.763 1.725-3.942 2.484-7.068 2.507zm-1.19-7.603c-.074 0-.148.003-.224.006-1.658.068-2.593.88-2.548 1.698.035.63.553 1.318 1.978 1.318.087 0 .177-.003.269-.01 1.876-.1 2.727-1.326 2.91-3.436-.748-.282-1.553-.44-2.386-.44v.864z"/></svg>
+        </a>
+        <a href="mailto:contato@amaralgama.adv.br" aria-label="E-mail" class="social-link">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 Amaral Gama — Sociedade Individual de Advocacia · OAB/RJ R8.000.676/2022</div>
+    <div class="footer-oab">Em conformidade com o Código de Ética e Disciplina da OAB</div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{
+  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>40);
+});
+function toggleMenu(){
+  const menu = document.getElementById('mobileMenu');
+  menu.classList.toggle('open');
+  document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+}
+function closeMenu(){
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.body.style.overflow = '';
+}
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.12 });
+reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
