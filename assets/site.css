@@ -280,3 +280,8 @@ section{padding:clamp(72px,11vw,140px) 0}
 .more-card .s{display:block;margin-top:6px;font-size:.9rem;color:rgba(241,240,238,.82)}
 .more-card .a{font-family:var(--ff-display);font-size:2rem;color:var(--gold-bright);line-height:1;transition:transform .25s}
 .more-card:hover .a{transform:translateX(4px)}
+
+/* Lista de serviços nos blocos da página Serviços */
+.svc-names{list-style:none;border-top:1px solid var(--line)}
+.svc-names li{padding:14px 0;border-bottom:1px solid var(--line);font-family:var(--ff-display);font-size:1.3rem;color:var(--forest)}
+.line-block .for{font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-deep);font-weight:400}
