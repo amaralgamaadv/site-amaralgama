@@ -22,6 +22,21 @@
 <link rel="preload" href="assets/fonts/cormorant-garamond-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/jost-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/site.css">
+<style>
+/* Mukambu: fotos das estações e navegação entre bairros */
+.mk-photos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:8px 0 36px}
+.mk-photos figure{margin:0;min-width:0}
+.mk-photos img{display:block;width:100%!important;max-width:100%;height:auto!important;aspect-ratio:4/3;object-fit:cover;background:#E5E3DD}
+.mk-photos figcaption{font-size:13px;line-height:1.45;color:#4E5C40;margin-top:8px}
+.mk-photos figcaption b{font-weight:400;color:#1E2A14}
+.mk-photos.one{grid-template-columns:minmax(0,1fr)}
+.mk-others{margin:40px 0 8px;padding-top:24px;border-top:1px solid #E5E3DD}
+.mk-others ul{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px 28px}
+.mk-others a{color:#7A5C0A}
+@media (max-width:640px){.mk-photos{grid-template-columns:minmax(0,1fr)}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Início", "item": "https://amaralgama.adv.br/"}, {"@type": "ListItem", "position": 2, "name": "Mukambu Carioca", "item": "https://amaralgama.adv.br/mukambu"}, {"@type": "ListItem", "position": 3, "name": "Rocha Miranda", "item": "https://amaralgama.adv.br/rocha-miranda"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "A casa está no nome da minha bisavó. Ainda dá para regularizar?", "acceptedAnswer": {"@type": "Answer", "text": "Dá. O inventário pode abranger mais de uma geração de falecidos, e o caminho depende de quem são os herdeiros hoje e se estão de acordo."}}, {"@type": "Question", "name": "A associação de moradores pode fechar a rua com portão?", "acceptedAnswer": {"@type": "Answer", "text": "Só com autorização da Prefeitura. Sem ela, o portão pode ser retirado. E, mesmo autorizado, o controle não pode impedir a passagem de quem se identifica."}}, {"@type": "Question", "name": "Quero reformar um imóvel perto de um bem tombado. Preciso de autorização?", "acceptedAnswer": {"@type": "Answer", "text": "Pode precisar. Consulte o órgão de patrimônio antes de começar a obra."}}, {"@type": "Question", "name": "Moro há muitos anos numa casa sem escritura na comunidade. Tenho algum direito?", "acceptedAnswer": {"@type": "Answer", "text": "A posse longa e pacífica tem valor jurídico. A REURB e a usucapião são os caminhos para chegar ao título."}}, {"@type": "Question", "name": "Vi uma casa de Rocha Miranda em leilão. Por onde começo?", "acceptedAnswer": {"@type": "Answer", "text": "Pela matrícula e pelo edital, antes do lance. Veja o nosso texto sobre os riscos antes de arrematar."}}]}</script>
 </head>
 <body>
 <a class="skip" href="#conteudo-principal">Pular para o conteúdo</a>
@@ -42,10 +57,11 @@
     <p class="crumbs"><a href="mukambu.html">Mukambu Carioca</a> · Rocha Miranda</p>
     <h1>Rocha Miranda, <em>o bairro das pedras preciosas.</em></h1>
     <p class="lead">Ruas com nome de diamante, rubi e topázio, casas de família que atravessam gerações e um cinema que virou caso de patrimônio. Aqui estão as questões imobiliárias que mais aparecem no bairro, e os caminhos para cada uma.</p>
-    <p class="meta">Mukambu Carioca · Atualizado em setembro de 2026</p>
+    <p class="meta">Mukambu Carioca · Atualizado em novembro de 2026</p>
   </div>
 </section>
 <div class="wrap"><article class="prose">
+<div class="mk-photos one"><figure><img src="assets/fotos/rocha-miranda-hoje.jpg" alt="Estação Rocha Miranda em 2025" width="1200" height="900" loading="lazy" onerror="this.closest('figure').remove()"><figcaption><b>Estação Rocha Miranda, inaugurada em 1905 com o nome de Sapê.</b> Foto de 2025, via Wikimedia Commons. Licença CC0.</figcaption></figure></div>
 <p>Rocha Miranda nasceu de um loteamento planejado no começo do século XX. Mais de cem anos depois, muitas casas continuam nas mesmas famílias. E a documentação nem sempre acompanhou essa história.</p>
 
 <h2>Como o bairro se formou</h2>
@@ -57,13 +73,18 @@
 <p>Na Rua dos Topázios fica o antigo Cine Guaraci, inaugurado em 1954. O cinema fechou em 1989 e ficou décadas abandonado. A Prefeitura tombou o prédio em 2003. Em 2018, a Câmara Municipal aprovou o destombamento parcial para uso comercial, mantendo a obrigação de preservar a fachada. O prefeito vetou, e os vereadores derrubaram o veto.</p>
 <p>O caso ensina uma coisa a qualquer proprietário. Tombamento não tira o imóvel do dono, mas muda o que ele pode fazer. Reforma, demolição e troca de uso passam a depender do órgão de patrimônio. Antes de comprar, reformar ou alugar um imóvel protegido, ou um imóvel vizinho de bem protegido, vale consultar essas restrições.</p>
 
+<h2>Samba e território negro</h2>
+<p>Rocha Miranda também tem a sua história no samba. A União de Rocha Miranda, escola azul e branca do bairro, foi fundada por integrantes da Independente do Zumbi e estreou no carnaval em 1979. Foi nela que o sambista Xangô da Mangueira começou a carreira. Em 1991, a escola levou para a avenida o enredo “A coroação da Tia Ciata”, homenagem à baiana que guardou o samba na Praça Onze.</p>
+<p>A escola deixou de desfilar no fim dos anos 1990. A memória segue nas famílias do bairro, muitas delas nas mesmas casas há gerações. É essa história que aparece, ou falta, no registro dos imóveis.</p>
+
 <h2>O que aparece no registro dos imóveis</h2>
 <h3>A casa herdada</h3>
-<p>O imóvel ainda está no nome do avô ou da bisavó. Sem inventário, ninguém vende, financia nem regulariza. Quando os herdeiros estão de acordo, o inventário pode ser feito em cartório. Veja o nosso texto sobre <a href="artigo-regularizacao.html">imóvel herdado sem inventário</a>.</p>
+<p>O imóvel ainda está no nome do avô ou da bisavó. Sem inventário, ninguém vende, financia nem regulariza. Quando os herdeiros estão de acordo, o inventário pode ser feito em cartório. Desde 2024, isso vale mesmo quando há herdeiro menor de idade, desde que ele receba a sua parte de cada bem (Resolução CNJ nº 571/2024). Veja o nosso texto sobre <a href="artigo-regularizacao.html">imóvel herdado sem inventário</a>.</p>
 <h3>A casa de fundos</h3>
-<p>Duas ou três casas no mesmo lote, cada uma de um parente, e uma única matrícula. Para cada família ter o que é seu no papel, os caminhos são o desmembramento do lote, quando a Prefeitura permite, ou a instituição de condomínio entre as casas.</p>
+<p>Duas ou três casas no mesmo lote, cada uma de um parente, e uma única matrícula. Para cada família ter o que é seu no papel, os caminhos são o desmembramento do lote, quando a Prefeitura permite, ou a instituição de condomínio entre as casas. Quando uma casa foi construída em cima da outra, há ainda o direito de laje (Código Civil, art. 1.510-A): a unidade de cima pode ter matrícula própria e ser vendida, financiada ou deixada de herança.</p>
 <h3>A compra com recibo</h3>
 <p>Contrato de gaveta, cessão de direitos, recibo de compra e venda. Quem pagou e não tem escritura pode buscar a adjudicação compulsória ou a usucapião, hoje também possíveis direto no Registro de Imóveis.</p>
+<p>Se o imóvel ainda estava financiado, a situação muda. Na alienação fiduciária, até a última parcela a propriedade é do banco, e quem vendeu só podia ceder os seus direitos com a anuência dele (Lei nº 9.514/1997, art. 29). Sem essa anuência, para o banco nada mudou, e o imóvel pode ir a leilão se as parcelas atrasarem.</p>
 <h3>A construção sem habite-se</h3>
 <p>Casas que ganharam segundo andar e lojas no térreo, sem habite-se. Antes de vender, financiar ou alugar para comércio, é preciso saber o que a legislação de uso do solo e o Plano Diretor do Rio (Lei Complementar nº 270/2024) permitem para aquele lote.</p>
 
@@ -93,14 +114,15 @@
 <p>Pela matrícula e pelo edital, antes do lance. Veja o nosso texto sobre <a href="artigo-leilao.html">os riscos antes de arrematar</a>.</p>
 
 <h2>O Mukambu em Rocha Miranda</h2>
-<p>Depois de Madureira, Rocha Miranda é o próximo passo do projeto. O Mukambu produz conteúdo sobre as questões locais e orienta quem precisa regularizar, comprar, arrematar ou organizar o condomínio.</p>
+<p>Rocha Miranda foi o segundo bairro do projeto, depois de Madureira. O Mukambu produz conteúdo sobre as questões locais e orienta quem precisa regularizar, comprar, arrematar ou organizar o condomínio.</p>
 
+<nav class="mk-others" aria-label="Outros bairros do Mukambu"><span class="label">Outros bairros do Mukambu</span><ul><li><a href="cascadura.html">Cascadura · estação de 1858</a></li><li><a href="madureira.html">Madureira · estação de 1890</a></li><li><a href="mukambu.html">Ver o mapa do Mukambu →</a></li></ul></nav>
 <div class="cta-box on-dark">
   <h2>Tem um imóvel em Rocha Miranda?</h2>
   <p>Casa herdada, rua fechada, imóvel tombado ou compra em leilão: conte o seu caso. O escritório fica a poucos minutos, em Madureira.</p>
   <div class="actions" style="margin-top:24px"><a class="btn" href="https://wa.me/5521971707910?text=Ol%C3%A1%2C%20Dr.%20Bruno%21%20Sou%20de%20Rocha%20Miranda%20e%20gostaria%20de%20conversar%20sobre%20o%20meu%20caso%20imobili%C3%A1rio." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> Falar com o Dr. Bruno</a></div>
 </div>
-<p class="disclaimer">Este texto é informativo e não substitui a análise do seu caso. Fontes: Lei nº 6.766/1979 (art. 2º, § 8º), Lei nº 13.465/2017, Lei de Registros Públicos, Plano Diretor do Rio (LC 270/2024), Prefeitura do Rio, Censo 2022 (IBGE) e Dicionário de Favelas Marielle Franco.</p>
+<p class="disclaimer">Este texto é informativo e não substitui a análise do seu caso. Fontes: Código Civil (art. 1.510-A), Lei nº 9.514/1997 (art. 29), Resolução CNJ nº 571/2024, Lei nº 6.766/1979 (art. 2º, § 8º), Lei nº 13.465/2017, Lei de Registros Públicos, Plano Diretor do Rio (LC 270/2024), Prefeitura do Rio, Censo 2022 (IBGE), Dicionário de Favelas Marielle Franco e Wikipédia (verbete “União de Rocha Miranda”).</p>
 </article></div>
 
 </main>

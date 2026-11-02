@@ -22,6 +22,21 @@
 <link rel="preload" href="assets/fonts/cormorant-garamond-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/jost-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/site.css">
+<style>
+/* Mukambu: fotos das estações e navegação entre bairros */
+.mk-photos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:8px 0 36px}
+.mk-photos figure{margin:0;min-width:0}
+.mk-photos img{display:block;width:100%!important;max-width:100%;height:auto!important;aspect-ratio:4/3;object-fit:cover;background:#E5E3DD}
+.mk-photos figcaption{font-size:13px;line-height:1.45;color:#4E5C40;margin-top:8px}
+.mk-photos figcaption b{font-weight:400;color:#1E2A14}
+.mk-photos.one{grid-template-columns:minmax(0,1fr)}
+.mk-others{margin:40px 0 8px;padding-top:24px;border-top:1px solid #E5E3DD}
+.mk-others ul{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px 28px}
+.mk-others a{color:#7A5C0A}
+@media (max-width:640px){.mk-photos{grid-template-columns:minmax(0,1fr)}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Início", "item": "https://amaralgama.adv.br/"}, {"@type": "ListItem", "position": 2, "name": "Mukambu Carioca", "item": "https://amaralgama.adv.br/mukambu"}, {"@type": "ListItem", "position": 3, "name": "Cascadura", "item": "https://amaralgama.adv.br/cascadura"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Construí um segundo andar sem licença. Ainda dá para legalizar?", "acceptedAnswer": {"@type": "Answer", "text": "Em muitos casos, sim, pela legalização com contrapartida. O primeiro passo é saber o que o Plano Diretor permite para o seu lote."}}, {"@type": "Question", "name": "A casa é da família, mas um dos herdeiros é menor de idade. Precisa ir à Justiça?", "acceptedAnswer": {"@type": "Answer", "text": "Não necessariamente. Desde 2024, o inventário pode ser feito em cartório nesse caso, desde que o menor receba a sua parte de cada bem."}}, {"@type": "Question", "name": "Comprei com contrato de gaveta e o vendedor sumiu. E agora?", "acceptedAnswer": {"@type": "Answer", "text": "Se o preço foi pago, a adjudicação compulsória pode ser pedida no Registro de Imóveis, sem processo judicial."}}, {"@type": "Question", "name": "Meu contrato da loja vence no ano que vem. O que faço?", "acceptedAnswer": {"@type": "Answer", "text": "Confira se cumpre as condições da renovatória. Se cumprir, a ação precisa ser proposta entre um ano e seis meses antes do vencimento."}}, {"@type": "Question", "name": "Tenho um imóvel perto do Hospital das Dores. Posso construir?", "acceptedAnswer": {"@type": "Answer", "text": "Pode haver limites. Na área de entorno, prédios novos têm altura máxima de 15 metros e a fachada tem regras próprias. Consulte antes de começar."}}]}</script>
 </head>
 <body>
 <a class="skip" href="#conteudo-principal">Pular para o conteúdo</a>
@@ -42,16 +57,21 @@
     <p class="crumbs"><a href="mukambu.html">Mukambu Carioca</a> · Cascadura</p>
     <h1>Cascadura, <em>onde o subúrbio começou a crescer.</em></h1>
     <p class="lead">Estação de 1858, chácaras divididas em lotes, sobrados com loja no térreo e um hospital histórico recém-tombado. Aqui estão as questões imobiliárias que mais aparecem no bairro, e os caminhos para cada uma.</p>
-    <p class="meta">Mukambu Carioca · Atualizado em outubro de 2026</p>
+    <p class="meta">Mukambu Carioca · Atualizado em novembro de 2026</p>
   </div>
 </section>
 <div class="wrap"><article class="prose">
+<div class="mk-photos"><figure><img src="assets/fotos/cascadura-1908.jpg" alt="Estação de Cascadura em 1908" width="1200" height="900" loading="lazy" onerror="this.closest('figure').remove()"><figcaption><b>Estação de Cascadura em 1908, antes do viaduto que dividiu o bairro.</b> Via Wikimedia Commons, usuário Bellem. Licença CC BY-SA 3.0.</figcaption></figure><figure><img src="assets/fotos/cascadura-hoje.jpg" alt="Estação de Cascadura em 2011" width="1200" height="900" loading="lazy" onerror="this.closest('figure').remove()"><figcaption><b>A estação em 2011.</b> Foto: Junius, via Wikimedia Commons. Domínio público.</figcaption></figure></div>
 <p>Antes de Madureira virar o centro do subúrbio, quem cumpria esse papel era Cascadura. O bairro cresceu cedo, em volta da estação e do comércio. E muitos imóveis carregam até hoje as marcas desse crescimento.</p>
 
 <h2>Como o bairro se formou</h2>
 <p>A estação de Cascadura foi inaugurada em 1858, no mesmo ano da primeira ferrovia do país, a Estrada de Ferro Dom Pedro II. O ponto era deserto, na antiga Estrada Real de Santa Cruz, hoje Avenida Dom Hélder Câmara.</p>
 <p>A região era de fazendas e chácaras, como a do Campinho e a do Ferraz. Depois da Lei de Terras, de 1850, muitas foram divididas em lotes menores. A partir de 1875, bondes puxados a burro passaram a ligar Jacarepaguá à estação. Cocheiras e lojas surgiram em volta, e Cascadura virou o maior entreposto do subúrbio na segunda metade do século XIX.</p>
 <p class="callout">O nome tem mais de uma história. Uma versão fala do lugar chamado “Casca d'Ouro”, registrado pela viajante inglesa Maria Graham em 1824. Outra fala da pedreira de “casca dura” que os operários da ferrovia tiveram dificuldade para abrir.<br><small>Fonte: <a href="https://multi.rio/index.php/noticias/680-cascadura-impulsionou-o-crescimento-da-zona-norte" target="_blank" rel="noopener">MultiRio, “Cascadura impulsionou o crescimento da Zona Norte”</a>.</small></p>
+
+<h2>Samba, fé e território negro</h2>
+<p>O bairro tem escola de samba própria, a Arrastão de Cascadura, que leva para a avenida a história negra do Brasil. Em 2020 o enredo foi sobre Orumilá, orixá da sabedoria. Em 2025, sobre o Teatro Experimental do Negro, criado por Abdias Nascimento.</p>
+<p>A fé também marcou o território. Na década de 1970, Maria de Iansã fundou em Cascadura o terreiro de candomblé Kwe Cejá Demi, da nação jeje. As atividades se encerraram depois da morte da ialorixá, em 2015.</p>
 
 <h2>O Hospital das Dores e a vizinhança protegida</h2>
 <p>Na Avenida Ernani Cardoso fica o Hospital Nossa Senhora das Dores. Foi fundado no fim do século XIX pela Santa Casa da Misericórdia, na antiga Chácara do Ferraz, e foi o primeiro hospital do Brasil dedicado à tuberculose. A capela neogótica, com vitrais franceses, é do começo do século XX.</p>
@@ -65,11 +85,18 @@
 
 <h2>O que aparece no registro dos imóveis</h2>
 <h3>A casa herdada</h3>
-<p>O imóvel ainda está no nome do avô ou da bisavó. Sem inventário, ninguém vende, financia nem regulariza. Desde 2024, o inventário pode ser feito em cartório mesmo quando há herdeiro menor de idade, desde que ele receba a sua parte de cada bem (Resolução CNJ nº 571/2024). Veja o nosso texto sobre <a href="artigo-regularizacao.html">imóvel herdado sem inventário</a>.</p>
+<p>O imóvel ainda está no nome do avô ou da bisavó. Sem inventário, ninguém vende, financia nem regulariza. Quando os herdeiros estão de acordo, o inventário pode ser feito em cartório, e desde 2024 isso vale mesmo quando há herdeiro menor de idade, desde que ele receba a sua parte de cada bem (Resolução CNJ nº 571/2024). Veja o nosso texto sobre <a href="artigo-regularizacao.html">imóvel herdado sem inventário</a>.</p>
 <h3>A compra com recibo</h3>
 <p>Contrato de gaveta, promessa de compra e venda, cessão de direitos. Quem pagou tudo e não recebeu a escritura pode pedir a adjudicação compulsória direto no Registro de Imóveis, sem processo judicial (Lei de Registros Públicos, art. 216-B). Quando nem o contrato existe, o caminho pode ser a usucapião.</p>
+<p>Se o imóvel ainda estava financiado, a situação muda. Na alienação fiduciária, até a última parcela a propriedade é do banco, e quem vendeu só podia ceder os seus direitos com a anuência dele (Lei nº 9.514/1997, art. 29). Sem essa anuência, para o banco nada mudou, e o imóvel pode ir a leilão se as parcelas atrasarem.</p>
+<h3>A casa em cima da casa</h3>
+<p>O sobrado que ganhou um andar para o filho ou o neto pode virar duas unidades no papel. É o direito de laje (Código Civil, art. 1.510-A): a unidade de cima ganha matrícula própria e pode ser vendida, financiada ou deixada de herança. O primeiro passo é regularizar a construção de baixo.</p>
 <h3>O prédio antigo</h3>
 <p>Prédios antigos que funcionam como condomínio, mas nunca tiveram o condomínio instituído no cartório nem convenção registrada. Sem isso, a cobrança das despesas e as decisões coletivas ficam frágeis.</p>
+
+<h2>Regularização fundiária: o título de quem já mora</h2>
+<p>Cascadura também tem comunidades formadas por ocupação, como o Morro do Fubá. Muitas famílias vivem ali há décadas, sem título.</p>
+<p>A Regularização Fundiária Urbana, a REURB (Lei nº 13.465/2017), é o caminho para transformar a posse em propriedade registrada. Quando a ocupação é de população de baixa renda, a modalidade é a REURB-S, de interesse social. O pedido pode partir dos próprios moradores, de uma associação ou do poder público.</p>
 
 <h2>O comércio de Cascadura</h2>
 <p>O comércio fez o bairro, e muitos lojistas estão no mesmo ponto há décadas. Para eles, o imóvel é parte do negócio. Perder o ponto pode significar perder a clientela de uma vida.</p>
@@ -100,12 +127,13 @@
 <h2>O Mukambu em Cascadura</h2>
 <p>Depois de Madureira e Rocha Miranda, Cascadura é o terceiro bairro do projeto. O Mukambu produz conteúdo sobre as questões locais e orienta quem precisa regularizar, comprar, arrematar, renovar o aluguel ou organizar o condomínio.</p>
 
+<nav class="mk-others" aria-label="Outros bairros do Mukambu"><span class="label">Outros bairros do Mukambu</span><ul><li><a href="madureira.html">Madureira · estação de 1890</a></li><li><a href="rocha-miranda.html">Rocha Miranda · estação de 1905</a></li><li><a href="mukambu.html">Ver o mapa do Mukambu →</a></li></ul></nav>
 <div class="cta-box on-dark">
   <h2>Tem um imóvel em Cascadura?</h2>
   <p>Obra sem licença, casa herdada, contrato de gaveta ou a renovação do aluguel da sua loja: conte o seu caso. O escritório fica ao lado, em Madureira.</p>
   <div class="actions" style="margin-top:24px"><a class="btn" href="https://wa.me/5521971707910?text=Ol%C3%A1%2C%20Dr.%20Bruno%21%20Sou%20de%20Cascadura%20e%20gostaria%20de%20conversar%20sobre%20o%20meu%20caso%20imobili%C3%A1rio." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> Falar com o Dr. Bruno</a></div>
 </div>
-<p class="disclaimer">Este texto é informativo e não substitui a análise do seu caso. Fontes: Lei nº 8.245/1991 (arts. 33 e 51), Lei de Registros Públicos (art. 216-B, incluído pela Lei nº 14.382/2022), Resolução CNJ nº 571/2024, Lei Complementar Municipal nº 281/2025, STJ (Jurisprudência em Teses, edição 53), Prefeitura do Rio e MultiRio.</p>
+<p class="disclaimer">Este texto é informativo e não substitui a análise do seu caso. Fontes: Lei nº 8.245/1991 (arts. 33 e 51), Código Civil (art. 1.510-A), Lei nº 9.514/1997 (art. 29), Lei nº 13.465/2017, Lei de Registros Públicos (art. 216-B, incluído pela Lei nº 14.382/2022), Resolução CNJ nº 571/2024, Lei Complementar Municipal nº 281/2025, STJ (Jurisprudência em Teses, edição 53), Prefeitura do Rio, MultiRio e Wikipédia (verbete “Cascadura”).</p>
 </article></div>
 
 </main>
