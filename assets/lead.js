@@ -2,7 +2,7 @@
    ENDPOINT: cole aqui o endereço do Apps Script publicado (termina em /exec).
    Enquanto estiver vazio, o formulário abre o WhatsApp com a mensagem já montada. */
 (function(){
-  var ENDPOINT = '';
+  var ENDPOINT = 'https://script.google.com/macros/s/AKfycbxXij_o4hRrxjwWDUIhMcgwtn84VgkWBZvsIoFZvYqC_lMbg9oBsDIwF7TxJfO_GSDe/exec';
   var WA = '5521971707910';
   var AVISO = 'v1-2026-11-27';
 
