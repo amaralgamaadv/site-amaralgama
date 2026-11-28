@@ -285,3 +285,35 @@ section{padding:clamp(72px,11vw,140px) 0}
 .svc-names{list-style:none;border-top:1px solid var(--line)}
 .svc-names li{padding:14px 0;border-bottom:1px solid var(--line);font-family:var(--ff-display);font-size:1.3rem;color:var(--forest)}
 .line-block .for{font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-deep);font-weight:400}
+
+/* Formulário de contato (27/11/2026) */
+.lead-sec{background:var(--cream-2)}
+.lead-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5vw,72px);align-items:start}
+.lead-intro h2{margin-top:6px}
+.lead-intro .muted{margin-top:14px;max-width:46ch}
+.lead-rules{list-style:none;margin-top:24px;display:grid;gap:10px;font-size:.95rem;color:var(--text-soft)}
+.lead-rules li{padding-left:18px;border-left:1px solid var(--gold)}
+.lead-form{display:grid;gap:16px;background:var(--white);border:1px solid var(--line);padding:clamp(22px,4vw,36px)}
+.lead-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.lead-form label{display:grid;gap:6px;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--forest-mid)}
+.lead-form label span{text-transform:none;letter-spacing:0;color:var(--text-soft)}
+.lead-form input:not([type=checkbox]):not([type=radio]),.lead-form select,.lead-form textarea{font:inherit;font-size:1rem;text-transform:none;letter-spacing:0;color:var(--forest);background:var(--cream);border:1px solid var(--line);padding:12px 14px;width:100%;border-radius:0}
+.lead-form textarea{resize:vertical;min-height:110px}
+.lead-form input:focus,.lead-form select:focus,.lead-form textarea:focus{outline:none;border-color:var(--gold);background:var(--white)}
+.lead-form input:user-invalid,.lead-form select:user-invalid{border-color:#8B2E1F}
+.lead-cont{justify-self:end;font-size:.75rem;color:var(--text-soft);text-transform:none;letter-spacing:0}
+.lead-pref{border:0;display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center}
+.lead-pref legend{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--forest-mid);margin-bottom:6px;width:100%}
+.lead-form .lead-pref label,.lead-form .lead-check{display:flex;gap:10px;align-items:flex-start;text-transform:none;letter-spacing:0;font-size:.95rem;color:var(--text)}
+.lead-check span{color:var(--text)!important;line-height:1.5}
+.lead-check input,.lead-pref input{accent-color:var(--forest);margin-top:.3em}
+.lead-hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+.lead-form .btn{justify-self:start}
+.lead-msg{font-size:.95rem;border-left:2px solid var(--gold);padding:10px 14px;background:var(--cream)}
+@media (max-width:860px){.lead-grid{grid-template-columns:minmax(0,1fr)}.lead-row{grid-template-columns:minmax(0,1fr)}.lead-form .btn{justify-self:stretch}}
+
+/* Linha de contato abaixo de cada serviço (27/11/2026) */
+.svc-cta{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);font-size:.92rem;display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center}
+.svc-cta a{color:var(--gold-deep);text-decoration:none;border-bottom:1px solid var(--line-gold)}
+.svc-cta a:hover,.svc-cta a:focus-visible{color:var(--forest);border-bottom-color:var(--gold)}
+.svc-cta .svc-cta-q{color:var(--text-soft)}

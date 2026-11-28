@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Serviços — Amaral Gama</title>
-<meta name="description" content="Condomínio, Blindagem, Leilão e Investidor, Locação, Defesa do Proprietário e Corretores: os serviços da Amaral Gama para proteger o seu patrimônio imobiliário.">
+<meta name="description" content="Herança e regularização, compra e venda, consumidor, condomínio, locação, leilão e corretores: os serviços da Amaral Gama para proteger o seu patrimônio imobiliário.">
 <link rel="canonical" href="https://amaralgama.adv.br/servicos">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Amaral Gama — Sociedade Individual de Advocacia">
 <meta property="og:title" content="Serviços — Amaral Gama">
-<meta property="og:description" content="Condomínio, Blindagem, Leilão e Investidor, Locação, Defesa do Proprietário e Corretores: os serviços da Amaral Gama para proteger o seu patrimônio imobiliário.">
+<meta property="og:description" content="Herança e regularização, compra e venda, consumidor, condomínio, locação, leilão e corretores: os serviços da Amaral Gama para proteger o seu patrimônio imobiliário.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://amaralgama.adv.br/servicos">
 <meta property="og:image" content="https://amaralgama.adv.br/og-amaralgama.jpg">
@@ -23,6 +23,46 @@
 <link rel="preload" href="assets/fonts/jost-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/site.css">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Início", "item": "https://amaralgama.adv.br/"}, {"@type": "ListItem", "position": 2, "name": "Serviços", "item": "https://amaralgama.adv.br/servicos"}]}</script>
+<style>
+/* Serviços interativos (27/11/2026) */
+.sv-anchor{display:block;position:relative;top:calc(-1 * var(--nav-h))}
+.sv-chips{display:flex;flex-wrap:wrap;gap:10px}
+.sv-chip{font:inherit;font-size:.95rem;line-height:1.35;text-align:left;background:var(--white);color:var(--forest);border:1px solid var(--line);padding:12px 16px;cursor:pointer;transition:border-color .2s,background .2s,color .2s}
+.sv-chip:hover{border-color:var(--gold)}
+.sv-chip[aria-pressed="true"]{background:var(--forest);border-color:var(--forest);color:var(--cream)}
+.sv-answer{margin-top:28px;background:var(--forest);color:var(--cream);padding:clamp(24px,4vw,40px);display:grid;gap:20px;animation:svIn .45s ease}
+.sv-answer h3{font-family:var(--ff-display);font-weight:300;font-size:clamp(1.6rem,3vw,2.2rem);color:var(--cream)}
+.sv-answer ul{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.sv-answer li a{display:block;height:100%;text-decoration:none;border:1px solid rgba(241,240,238,.2);padding:16px 18px;transition:border-color .2s}
+.sv-answer li a:hover,.sv-answer li a:focus-visible{border-color:var(--gold)}
+.sv-answer li strong{display:block;font-family:var(--ff-display);font-weight:400;font-size:1.3rem;color:var(--cream)}
+.sv-answer li span{font-size:.95rem;color:rgba(241,240,238,.75)}
+.sv-answer .sv-actions{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center}
+.sv-answer .sv-actions a.link{color:var(--cream)}
+.sv-catalog{padding-top:0}
+.sv-search{display:grid;gap:6px;min-width:min(100%,320px)}
+.sv-search input{font:inherit;font-size:1rem;padding:12px 14px;border:1px solid var(--line);background:var(--white);color:var(--forest);width:100%}
+.sv-search input:focus{outline:none;border-color:var(--gold)}
+.sv-tabs{display:flex;gap:4px;overflow-x:auto;border-bottom:1px solid var(--line);margin-bottom:32px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.sv-tab{font:inherit;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;background:none;border:0;border-bottom:2px solid transparent;color:var(--text-soft);padding:14px 14px 12px;cursor:pointer;transition:color .2s,border-color .2s}
+.sv-tab:hover{color:var(--forest)}
+.sv-tab[aria-selected="true"]{color:var(--forest);border-bottom-color:var(--gold)}
+.sv-count{display:inline-block;min-width:1.6em;margin-left:6px;font-size:.7rem;color:var(--gold-deep)}
+.sv-panel{animation:svIn .4s ease}
+.sv-panel-head{display:grid;gap:6px;margin-bottom:22px;max-width:62ch}
+.sv-panel-title{font-family:var(--ff-display);font-weight:300;font-size:clamp(1.7rem,3vw,2.3rem)}
+.sv-cards{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.sv-card a{position:relative;display:grid;gap:8px;height:100%;text-decoration:none;background:var(--white);border:1px solid var(--line);padding:22px 44px 22px 22px;transition:border-color .2s,transform .2s}
+.sv-card a:hover,.sv-card a:focus-visible{border-color:var(--gold);transform:translateY(-2px)}
+.sv-card h3{font-family:var(--ff-display);font-weight:400;font-size:1.35rem;line-height:1.2;color:var(--forest)}
+.sv-card p{font-size:.95rem;color:var(--text-soft);line-height:1.5}
+.sv-go{position:absolute;right:18px;top:22px;color:var(--gold)}
+.sv-searching .sv-tabs{display:none}
+.sv-searching .sv-panel{display:block!important}
+.sv-searching .sv-panel.sv-none{display:none!important}
+@keyframes svIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.sv-answer,.sv-panel{animation:none}.sv-card a{transition:none}}
+</style>
 </head>
 <body>
 <a class="skip" href="#conteudo-principal">Pular para o conteúdo</a>
@@ -42,9 +82,34 @@
   <div class="wrap">
     <span class="label reveal">Serviços</span>
     <h1 class="reveal">Três frentes, <em>um propósito.</em></h1>
-    <p class="lead reveal">Todos os serviços do escritório existem para proteger o seu patrimônio imobiliário. Eles se organizam em três frentes: o condomínio, a casa da família e o investimento. Se o seu caso não aparece aqui, conte no WhatsApp. Dizemos com clareza se podemos ajudar.</p>
+    <p class="lead reveal">Todos os serviços do escritório existem para proteger o seu patrimônio imobiliário. Eles se organizam em três frentes: o condomínio, a casa da família e o investimento. Comece pela sua situação ou procure o serviço pelo bloco. Se o seu caso não aparece aqui, conte no WhatsApp. Dizemos com clareza se podemos ajudar.</p>
   </div>
 </section>
+
+<section class="sv-start" id="por-onde-comecar">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div><span class="label">Por onde começar</span><h2>O que está acontecendo <em>com o seu imóvel?</em></h2></div>
+      <p class="muted">Escolha a situação mais parecida com a sua. Mostramos os serviços que costumam resolver e o caminho para conversar com o advogado.</p>
+    </div>
+    <div class="sv-chips reveal" role="group" aria-label="Situações"><button type="button" class="sv-chip" aria-pressed="false" data-sit="0">Alguém da família faleceu e o imóvel ficou no nome dele</button><button type="button" class="sv-chip" aria-pressed="false" data-sit="1">Moro há anos no imóvel e não tenho escritura</button><button type="button" class="sv-chip" aria-pressed="false" data-sit="2">Vou comprar ou vender um imóvel</button><button type="button" class="sv-chip" aria-pressed="false" data-sit="3">Tenho problema com construtora ou conta de água e luz</button><button type="button" class="sv-chip" aria-pressed="false" data-sit="4">Sou síndico ou moro em condomínio</button><button type="button" class="sv-chip" aria-pressed="false" data-sit="5">Alugo um imóvel ou moro de aluguel</button><button type="button" class="sv-chip" aria-pressed="false" data-sit="6">Vou arrematar em leilão ou investir</button><button type="button" class="sv-chip" aria-pressed="false" data-sit="7">Estou com parcelas atrasadas do financiamento</button><button type="button" class="sv-chip" aria-pressed="false" data-sit="8">A Prefeitura está cobrando IPTU ou ITBI</button><button type="button" class="sv-chip" aria-pressed="false" data-sit="9">Sou corretor ou tenho imobiliária</button></div>
+    <div class="sv-answer" id="sv-answer" aria-live="polite" hidden></div>
+  </div>
+</section>
+
+<section class="sv-catalog" id="todos-os-servicos">
+  <span id="raio-x" class="sv-anchor"></span><span id="blindagem" class="sv-anchor"></span><span id="leilao" class="sv-anchor"></span>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div><span class="label">Todos os serviços</span><h2>53 serviços, <em>em sete blocos.</em></h2></div>
+      <div class="sv-search"><label for="sv-q" class="muted small">Procure pelo assunto</label><input id="sv-q" type="search" placeholder="Ex.: herança, laje, conta de luz, despejo" autocomplete="off"></div>
+    </div>
+    <div class="sv-tabs reveal" role="tablist" aria-label="Blocos de serviços"><button type="button" role="tab" class="sv-tab" id="tab-heranca" aria-controls="bloco-heranca" aria-selected="true" tabindex="0">Herança e regularização <span class="sv-count">7</span></button><button type="button" role="tab" class="sv-tab" id="tab-compra" aria-controls="bloco-compra" aria-selected="false" tabindex="-1">Compra e venda <span class="sv-count">5</span></button><button type="button" role="tab" class="sv-tab" id="tab-consumidor" aria-controls="bloco-consumidor" aria-selected="false" tabindex="-1">Consumidor, proprietário e impostos <span class="sv-count">10</span></button><button type="button" role="tab" class="sv-tab" id="tab-condominio" aria-controls="bloco-condominio" aria-selected="false" tabindex="-1">Condomínio <span class="sv-count">9</span></button><button type="button" role="tab" class="sv-tab" id="tab-locacao" aria-controls="bloco-locacao" aria-selected="false" tabindex="-1">Locação <span class="sv-count">8</span></button><button type="button" role="tab" class="sv-tab" id="tab-leilao" aria-controls="bloco-leilao" aria-selected="false" tabindex="-1">Leilão e investimento <span class="sv-count">7</span></button><button type="button" role="tab" class="sv-tab" id="tab-corretores" aria-controls="bloco-corretores" aria-selected="false" tabindex="-1">Corretores e imobiliárias <span class="sv-count">7</span></button></div>
+    <div class="sv-panels"><div class="sv-panel" role="tabpanel" id="bloco-heranca" aria-labelledby="tab-heranca"><div class="sv-panel-head"><span class="label">Frente 2 · Blindagem Imobiliária</span><h3 class="sv-panel-title">Herança e regularização</h3><p class="muted">Para quem herdou, para quem mora há anos sem escritura e para a casa que precisa entrar no papel.</p></div><ul class="sv-cards"><li class="sv-card" data-busca="inventário coloca o imóvel de quem faleceu no nome dos herdeiros, em cartório ou na justiça. herança herdeiro herdei falecimento faleceu óbito partilha"><a href="inventario.html"><h3>Inventário</h3><p>Coloca o imóvel de quem faleceu no nome dos herdeiros, em cartório ou na Justiça.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="usucapião transforma anos de posse em matrícula no seu nome. posse sem escritura anos morando"><a href="usucapiao.html"><h3>Usucapião</h3><p>Transforma anos de posse em matrícula no seu nome.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="regularização imobiliária retificação de área, adjudicação compulsória e o caminho certo para cada imóvel."><a href="blindagem.html#regularizacao"><h3>Regularização Imobiliária</h3><p>Retificação de área, adjudicação compulsória e o caminho certo para cada imóvel.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="direito de laje a casa construída em cima da casa, com matrícula própria. puxadinho casa em cima"><a href="blindagem.html#laje"><h3>Direito de Laje</h3><p>A casa construída em cima da casa, com matrícula própria.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="contrato de gaveta da compra feita com recibo até a escritura registrada. recibo sem escritura"><a href="blindagem.html#gaveta"><h3>Contrato de Gaveta</h3><p>Da compra feita com recibo até a escritura registrada.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="reurb regularização fundiária de núcleos informais."><a href="leilao-investimento.html#reurb"><h3>Reurb</h3><p>Regularização fundiária de núcleos informais.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="planejamento sucessório decidir em vida como o patrimônio passa para a família."><a href="leilao-investimento.html#sucessorio"><h3>Planejamento Sucessório</h3><p>Decidir em vida como o patrimônio passa para a família.</p><span class="sv-go" aria-hidden="true">→</span></a></li></ul></div><div class="sv-panel" role="tabpanel" id="bloco-compra" aria-labelledby="tab-compra" hidden><div class="sv-panel-head"><span class="label">Frente 2 · Blindagem Imobiliária</span><h3 class="sv-panel-title">Compra e venda</h3><p class="muted">Para quem vai comprar, vender ou já assinou e não recebeu o que foi prometido.</p></div><ul class="sv-cards"><li class="sv-card" data-busca="blindagem imobiliária matrícula, certidões e parecer escrito antes de assinar. comprar compra venda vender certidões"><a href="blindagem.html#blindagem-imobiliaria"><h3>Blindagem Imobiliária</h3><p>Matrícula, certidões e parecer escrito antes de assinar.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="imissão na posse do comprador comprou, registrou e não consegue entrar no imóvel."><a href="blindagem.html#imissao"><h3>Imissão na Posse do Comprador</h3><p>Comprou, registrou e não consegue entrar no imóvel.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="metragem a menor o imóvel tem menos área do que o contrato prometia."><a href="blindagem.html#metragem"><h3>Metragem a Menor</h3><p>O imóvel tem menos área do que o contrato prometia.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="rescisão contratual e distrato quando o negócio precisa ser desfeito: multa e devolução."><a href="locacao.html#distrato"><h3>Rescisão Contratual e Distrato</h3><p>Quando o negócio precisa ser desfeito: multa e devolução.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="ganho de capital na venda quanto vai para o imposto de renda antes de vender."><a href="leilao-investimento.html#ganho-capital"><h3>Ganho de Capital na Venda</h3><p>Quanto vai para o Imposto de Renda antes de vender.</p><span class="sv-go" aria-hidden="true">→</span></a></li></ul></div><div class="sv-panel" role="tabpanel" id="bloco-consumidor" aria-labelledby="tab-consumidor" hidden><div class="sv-panel-head"><span class="label">Frente 2 · Blindagem Imobiliária</span><h3 class="sv-panel-title">Consumidor, proprietário e impostos</h3><p class="muted">Para quem já é dono: construtora, concessionária de água e luz, vizinho e Prefeitura.</p></div><ul class="sv-cards"><li class="sv-card" data-busca="atraso na entrega de imóvel na planta a obra passou do prazo combinado."><a href="defesa-proprietario.html#atraso"><h3>Atraso na Entrega de Imóvel na Planta</h3><p>A obra passou do prazo combinado.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="juros de obra, sati e comissão repassada cobranças da construtora que podem não ser devidas."><a href="defesa-proprietario.html#sati"><h3>Juros de Obra, SATI e Comissão Repassada</h3><p>Cobranças da construtora que podem não ser devidas.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="ligação definitiva de água e luz custo repassado ao comprador sem previsão."><a href="defesa-proprietario.html#ligacao"><h3>Ligação Definitiva de Água e Luz</h3><p>Custo repassado ao comprador sem previsão.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="vícios construtivos infiltração, trinca e defeito que aparece depois da mudança."><a href="defesa-proprietario.html#vicios"><h3>Vícios Construtivos</h3><p>Infiltração, trinca e defeito que aparece depois da mudança.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="revisão de contas de água e luz conta fora do padrão, estimativa e cobrança retroativa. conta light cedae águas do rio energia"><a href="defesa-proprietario.html#contas"><h3>Revisão de Contas de Água e Luz</h3><p>Conta fora do padrão, estimativa e cobrança retroativa.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="direito de vizinhança infiltração, barulho e obra do vizinho."><a href="defesa-proprietario.html#vizinhanca"><h3>Direito de Vizinhança</h3><p>Infiltração, barulho e obra do vizinho.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="imóvel perto de bem tombado o que muda para quem tem imóvel vizinho ao patrimônio histórico."><a href="defesa-proprietario.html#patrimonio-historico"><h3>Imóvel Perto de Bem Tombado</h3><p>O que muda para quem tem imóvel vizinho ao patrimônio histórico.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="revisão de itbi pago a maior imposto de transmissão calculado sobre valor acima do declarado."><a href="defesa-proprietario.html#itbi"><h3>Revisão de ITBI Pago a Maior</h3><p>Imposto de transmissão calculado sobre valor acima do declarado.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="revisão de iptu e valor venal área, uso ou valor venal lançados de forma errada."><a href="defesa-proprietario.html#iptu"><h3>Revisão de IPTU e Valor Venal</h3><p>Área, uso ou valor venal lançados de forma errada.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="defesa em execução fiscal a prefeitura cobra na justiça iptu ou taxa atrasada."><a href="defesa-proprietario.html#execucao-fiscal"><h3>Defesa em Execução Fiscal</h3><p>A Prefeitura cobra na Justiça IPTU ou taxa atrasada.</p><span class="sv-go" aria-hidden="true">→</span></a></li></ul></div><div class="sv-panel" role="tabpanel" id="bloco-condominio" aria-labelledby="tab-condominio" hidden><div class="sv-panel-head"><span class="label">Frente 1 · Raio-X Condominial</span><h3 class="sv-panel-title">Condomínio</h3><p class="muted">Para o síndico que decide, para o condômino e para a administradora.</p></div><ul class="sv-cards"><li class="sv-card" data-busca="raio-x condominial auditoria em três pilares, com semáforo de riscos e plano de ação. síndico auditoria"><a href="condominio.html#raio-x"><h3>Raio-X Condominial</h3><p>Auditoria em três pilares, com semáforo de riscos e plano de ação.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="assessoria a condomínios acompanhamento jurídico contínuo para o síndico."><a href="condominio.html#assessoria"><h3>Assessoria a Condomínios</h3><p>Acompanhamento jurídico contínuo para o síndico.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="assessoria jurídica a administradoras suporte jurídico com regras claras de independência."><a href="condominio.html#administradoras"><h3>Assessoria Jurídica a Administradoras</h3><p>Suporte jurídico com regras claras de independência.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="revisão de convenção o que está desatualizado e a minuta da reforma."><a href="condominio.html#convencao"><h3>Revisão de Convenção</h3><p>O que está desatualizado e a minuta da reforma.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="revisão de regimento interno regras de uso, obras, animais e penalidades."><a href="condominio.html#regimento"><h3>Revisão de Regimento Interno</h3><p>Regras de uso, obras, animais e penalidades.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="instituição e registro de convenção para o condomínio que nunca foi instituído no cartório."><a href="condominio.html#instituicao"><h3>Instituição e Registro de Convenção</h3><p>Para o condomínio que nunca foi instituído no cartório.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="mediação e arbitragem condominial conflitos resolvidos antes de virar processo."><a href="condominio.html#mediacao"><h3>Mediação e Arbitragem Condominial</h3><p>Conflitos resolvidos antes de virar processo.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="condomínio contra construtora defeitos nas áreas comuns e na estrutura do prédio."><a href="condominio.html#construtora"><h3>Condomínio contra Construtora</h3><p>Defeitos nas áreas comuns e na estrutura do prédio.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="defesa do condômino multa, cota acima do devido e contas que não fecham."><a href="condominio.html#condomino"><h3>Defesa do Condômino</h3><p>Multa, cota acima do devido e contas que não fecham.</p><span class="sv-go" aria-hidden="true">→</span></a></li></ul></div><div class="sv-panel" role="tabpanel" id="bloco-locacao" aria-labelledby="tab-locacao" hidden><div class="sv-panel-head"><span class="label">Frente 2 · Blindagem Imobiliária</span><h3 class="sv-panel-title">Locação</h3><p class="muted">Para quem aluga, para quem mora de aluguel e para o comércio que depende do ponto.</p></div><ul class="sv-cards"><li class="sv-card" data-busca="ação de despejo por falta de pagamento, fim do contrato ou descumprimento. inquilino aluguel atrasado"><a href="locacao.html#despejo"><h3>Ação de Despejo</h3><p>Por falta de pagamento, fim do contrato ou descumprimento.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="cobrança de aluguéis e encargos aluguel, condomínio e iptu atrasados, contra inquilino e fiador."><a href="locacao.html#cobranca"><h3>Cobrança de Aluguéis e Encargos</h3><p>Aluguel, condomínio e IPTU atrasados, contra inquilino e fiador.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="contratos de locação e garantias contrato sob medida, com a garantia certa."><a href="locacao.html#contratos"><h3>Contratos de Locação e Garantias</h3><p>Contrato sob medida, com a garantia certa.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="aluguel sem contrato escrito o aluguel combinado de boca também é locação."><a href="locacao.html#sem-contrato"><h3>Aluguel sem Contrato Escrito</h3><p>O aluguel combinado de boca também é locação.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="ação renovatória protege o ponto do comerciante."><a href="locacao.html#renovatoria"><h3>Ação Renovatória</h3><p>Protege o ponto do comerciante.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="ação revisional de aluguel ajuste do aluguel ao preço de mercado."><a href="locacao.html#revisional"><h3>Ação Revisional de Aluguel</h3><p>Ajuste do aluguel ao preço de mercado.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="locação por temporada em condomínio aluguel por aplicativo e as regras do prédio."><a href="locacao.html#temporada"><h3>Locação por Temporada em Condomínio</h3><p>Aluguel por aplicativo e as regras do prédio.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="defesa do inquilino despejo, consignação e devolução da caução."><a href="locacao.html#inquilino"><h3>Defesa do Inquilino</h3><p>Despejo, consignação e devolução da caução.</p><span class="sv-go" aria-hidden="true">→</span></a></li></ul></div><div class="sv-panel" role="tabpanel" id="bloco-leilao" aria-labelledby="tab-leilao" hidden><div class="sv-panel-head"><span class="label">Frente 3 · Cuidado com a Terra</span><h3 class="sv-panel-title">Leilão e investimento</h3><p class="muted">Para quem arremata, investe e precisa organizar o patrimônio e os tributos.</p></div><ul class="sv-cards"><li class="sv-card" data-busca="due diligence de leilão edital, matrícula e débitos analisados antes do lance."><a href="leilao-investimento.html#due-diligence-leilao"><h3>Due Diligence de Leilão</h3><p>Edital, matrícula e débitos analisados antes do lance.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="acompanhamento pós-arremate carta de arrematação, registro e imissão na posse."><a href="leilao-investimento.html#pos-arremate"><h3>Acompanhamento Pós-Arremate</h3><p>Carta de arrematação, registro e imissão na posse.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="defesa do devedor fiduciário parcelas atrasadas e o risco de leilão pelo banco. financiamento banco parcelas atrasadas caixa"><a href="leilao-investimento.html#devedor-fiduciario"><h3>Defesa do Devedor Fiduciário</h3><p>Parcelas atrasadas e o risco de leilão pelo banco.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="assessoria a investidores parecer de viabilidade antes de investir."><a href="leilao-investimento.html#investidores"><h3>Assessoria a Investidores</h3><p>Parecer de viabilidade antes de investir.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="permuta e incorporação de pequeno porte terreno trocado por unidades construídas."><a href="leilao-investimento.html#permuta"><h3>Permuta e Incorporação de Pequeno Porte</h3><p>Terreno trocado por unidades construídas.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="holding imobiliária gestão, sucessão e tributação do patrimônio numa empresa."><a href="leilao-investimento.html#holding"><h3>Holding Imobiliária</h3><p>Gestão, sucessão e tributação do patrimônio numa empresa.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="tributação da renda de aluguel pessoa física ou empresa: o que muda no imposto."><a href="leilao-investimento.html#aluguel"><h3>Tributação da Renda de Aluguel</h3><p>Pessoa física ou empresa: o que muda no imposto.</p><span class="sv-go" aria-hidden="true">→</span></a></li></ul></div><div class="sv-panel" role="tabpanel" id="bloco-corretores" aria-labelledby="tab-corretores" hidden><div class="sv-panel-head"><span class="label">Frente 3 · Cuidado com a Terra</span><h3 class="sv-panel-title">Corretores e imobiliárias</h3><p class="muted">Para quem vive do mercado imobiliário e precisa de um jurídico ao lado da operação.</p></div><ul class="sv-cards"><li class="sv-card" data-busca="assessoria jurídica a corretores e imobiliárias suporte recorrente nos negócios em andamento."><a href="corretores-imobiliarias.html#parceria"><h3>Assessoria Jurídica a Corretores e Imobiliárias</h3><p>Suporte recorrente nos negócios em andamento.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="contratos da imobiliária administração, autorização de venda e parceria."><a href="corretores-imobiliarias.html#contratos-imobiliaria"><h3>Contratos da Imobiliária</h3><p>Administração, autorização de venda e parceria.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="análise do imóvel antes da captação o imóvel com problema de documento ainda pode virar negócio."><a href="corretores-imobiliarias.html#captacao"><h3>Análise do Imóvel Antes da Captação</h3><p>O imóvel com problema de documento ainda pode virar negócio.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="lgpd e prevenção à lavagem dados de clientes e deveres da imobiliária."><a href="corretores-imobiliarias.html#lgpd-pld"><h3>LGPD e Prevenção à Lavagem</h3><p>Dados de clientes e deveres da imobiliária.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="comissão de corretagem cobrança ou defesa da comissão."><a href="corretores-imobiliarias.html#comissao"><h3>Comissão de Corretagem</h3><p>Cobrança ou defesa da comissão.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="responsabilidade civil do corretor o dever de informar e a defesa do corretor."><a href="corretores-imobiliarias.html#responsabilidade"><h3>Responsabilidade Civil do Corretor</h3><p>O dever de informar e a defesa do corretor.</p><span class="sv-go" aria-hidden="true">→</span></a></li><li class="sv-card" data-busca="processo ético no creci defesa do corretor no conselho regional."><a href="corretores-imobiliarias.html#creci"><h3>Processo Ético no CRECI</h3><p>Defesa do corretor no Conselho Regional.</p><span class="sv-go" aria-hidden="true">→</span></a></li></ul></div></div>
+    <p class="sv-empty muted" id="sv-empty" hidden>Nenhum serviço com esse assunto. Conte o seu caso no WhatsApp: dizemos com clareza se podemos ajudar.</p>
+  </div>
+</section>
+
 
 <section class="tint">
   <div class="wrap">
@@ -60,88 +125,6 @@
   </div>
 </section>
 
-<section class="frente" id="raio-x">
-<div class="wrap">
-  <div class="section-head reveal">
-    <div><span class="label">Frente 1 · Raio-X Condominial</span><h2>Condomínio, <em>com documento na mão.</em></h2></div>
-    <p class="muted">Para o prédio, a vila e o condomínio que funciona na prática, mas nunca foi instituído no cartório. O diagnóstico aponta o risco antes que ele vire multa, processo ou assembleia anulada.</p>
-  </div>
-  <div class="line-block reveal" id="b-raio-x">
-    <div class="aside">
-      <h2>Condomínio</h2>
-      <p>Para quem administra ou vive em condomínio e quer saber, com documento na mão, onde estão os riscos.</p>
-    </div>
-    <div>
-      <ul class="svc-names"><li>Raio-X Condominial</li><li>Assessoria a Condomínios</li><li>Revisão de Convenção e de Regimento Interno</li><li>Mediação e Arbitragem Condominial</li><li>Condomínio contra Construtora</li><li>Defesa do Condômino</li></ul>
-      <a class="more-card" href="condominio.html"><span><span class="t">Ver os serviços de Condomínio</span><span class="s">Dez serviços: diagnóstico e gestão, documentos do condomínio e conflitos.</span></span><span class="a" aria-hidden="true">→</span></a>
-    </div>
-  </div>
-</div>
-</section>
-<section class="frente" id="blindagem">
-<div class="wrap">
-  <div class="section-head reveal">
-    <div><span class="label">Frente 2 · Blindagem Imobiliária</span><h2>A casa da família, <em>no papel certo.</em></h2></div>
-    <p class="muted">Para quem vai comprar, para quem herdou, para quem aluga e para quem já é dono. É a frente que mais conversa com o subúrbio: contrato de gaveta, inventário atrasado, casa de fundos e direito de laje.</p>
-  </div>
-  <div class="line-block reveal" id="b-blindagem">
-    <div class="aside">
-      <h2>Blindagem</h2>
-      <p>Para a casa que você está prestes a comprar, a que herdou ou a que precisa colocar em ordem.</p>
-    </div>
-    <div>
-      <ul class="svc-names"><li>Blindagem Imobiliária</li><li>Regularização Imobiliária</li><li>Contrato de Gaveta</li><li>Imissão na Posse do Comprador</li><li>Metragem a Menor</li></ul>
-      <a class="more-card" href="blindagem.html"><span><span class="t">Ver os serviços de Blindagem</span><span class="s">Antes de comprar, para colocar o imóvel em ordem e depois da compra.</span></span><span class="a" aria-hidden="true">→</span></a>
-    </div>
-  </div><div class="line-block reveal" id="b-locacao">
-    <div class="aside">
-      <h2>Locação</h2>
-      <p>Para quem aluga, para quem mora de aluguel e para o comércio que depende do ponto.</p>
-    </div>
-    <div>
-      <ul class="svc-names"><li>Ação de Despejo</li><li>Cobrança de Aluguéis e Encargos</li><li>Ação Renovatória</li><li>Ação Revisional de Aluguel</li><li>Contratos de Locação e Garantias</li><li>Defesa do Inquilino</li></ul>
-      <a class="more-card" href="locacao.html"><span><span class="t">Ver os serviços de Locação</span><span class="s">Oito serviços para proprietários, inquilinos e comerciantes.</span></span><span class="a" aria-hidden="true">→</span></a>
-    </div>
-  </div><div class="line-block reveal" id="b-defesa">
-    <div class="aside">
-      <h2>Defesa do Proprietário</h2>
-      <p>Para quem já é dono, ou está prestes a ser: obra atrasada, defeito, conta errada e imposto cobrado a mais.</p>
-    </div>
-    <div>
-      <ul class="svc-names"><li>Atraso na Entrega de Imóvel na Planta</li><li>Vícios Construtivos</li><li>Revisão de Contas de Água e Luz</li><li>Revisão de ITBI e de IPTU</li><li>Defesa em Execução Fiscal</li><li>Direito de Vizinhança</li></ul>
-      <a class="more-card" href="defesa-proprietario.html"><span><span class="t">Ver os serviços de Defesa do Proprietário</span><span class="s">Nove serviços: compra na planta, casa com defeito, contas e tributos.</span></span><span class="a" aria-hidden="true">→</span></a>
-    </div>
-  </div>
-  <p class="muted reveal" style="margin-top:28px">Veja como essas questões aparecem em cada bairro no <a href="mukambu.html">Mukambu Carioca</a>.</p>
-</div>
-</section>
-<section class="frente" id="leilao">
-<div class="wrap">
-  <div class="section-head reveal">
-    <div><span class="label">Frente 3 · Cuidado com a Terra</span><h2>Leilão e investimento, <em>sem surpresa.</em></h2></div>
-    <p class="muted">Para quem arremata, investe ou vive do mercado imobiliário. Edital, matrícula e débitos analisados antes do lance, e retaguarda jurídica para corretores e imobiliárias.</p>
-  </div>
-  <div class="line-block reveal" id="b-leilao">
-    <div class="aside">
-      <h2>Leilão e Investidor</h2>
-      <p>Para quem arremata, investe e precisa organizar o patrimônio e os tributos que vêm com ele.</p>
-    </div>
-    <div>
-      <ul class="svc-names"><li>Due Diligence de Leilão</li><li>Acompanhamento Pós-Arremate</li><li>Defesa do Devedor Fiduciário</li><li>Holding Imobiliária</li><li>Planejamento Sucessório</li><li>Reurb</li></ul>
-      <a class="more-card" href="leilao-investimento.html"><span><span class="t">Ver os serviços de Leilão e Investidor</span><span class="s">Dez serviços: leilão, investimento e regularização, patrimônio e tributos.</span></span><span class="a" aria-hidden="true">→</span></a>
-    </div>
-  </div><div class="line-block reveal" id="b-corretores">
-    <div class="aside">
-      <h2>Corretores e Imobiliárias</h2>
-      <p>Para quem vive do mercado imobiliário e precisa de um jurídico de confiança ao lado da operação.</p>
-    </div>
-    <div>
-      <ul class="svc-names"><li>Parceria com Corretores e Imobiliárias</li><li>Contratos da Imobiliária</li><li>Comissão de Corretagem</li><li>Responsabilidade Civil do Corretor</li><li>Processo Ético no CRECI</li><li>LGPD e Prevenção à Lavagem</li></ul>
-      <a class="more-card" href="corretores-imobiliarias.html"><span><span class="t">Ver os serviços de Corretores e Imobiliárias</span><span class="s">Seis serviços: suporte contínuo e defesa quando o conflito chega.</span></span><span class="a" aria-hidden="true">→</span></a>
-    </div>
-  </div>
-</div>
-</section>
 <section class="tint">
   <div class="wrap">
     <div class="section-head reveal">
@@ -162,7 +145,7 @@
     <div class="reveal">
       <span class="label">Atendimento</span>
       <h2 style="margin-top:22px">Vamos proteger <em>o seu patrimônio.</em></h2>
-      <p class="lead">Conte o seu caso no WhatsApp. A primeira resposta vem do Silvio, nosso assistente, que organiza as informações para o Dr. Bruno.</p>
+      <p class="lead">Conte o seu caso no WhatsApp. A primeira resposta vem do Silvio, nosso assistente, que organiza as informações para o advogado.</p>
     </div>
     <div class="actions reveal">
       <a class="btn" href="https://wa.me/5521971707910?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Amaral%20Gama%20e%20gostaria%20de%20conversar%20sobre%20o%20meu%20caso." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> Conversar no WhatsApp</a>
@@ -182,7 +165,7 @@
         <h4>Navegação</h4>
         <ul>
           <li><a href="servicos.html">Serviços</a></li>
-          <li><a href="sobre.html">Sobre o Dr. Bruno</a></li>
+          <li><a href="sobre.html">Sobre o advogado</a></li>
           <li><a href="compromissos.html">Compromissos</a></li>
           <li><a href="conteudo.html">Conteúdo</a></li>
           <li><a href="mukambu.html">Mukambu Carioca</a></li>
@@ -206,6 +189,53 @@
   </div>
 </footer>
 <a class="wa-float" href="https://wa.me/5521971707910?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Amaral%20Gama%20e%20gostaria%20de%20conversar%20sobre%20o%20meu%20caso." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+<script>
+(function(){
+  var SIT = [{"t": "O caminho começa pelo inventário.", "b": "heranca", "w": "https://wa.me/5521971707910?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Amaral%20Gama.%20Algu%C3%A9m%20da%20fam%C3%ADlia%20faleceu%20e%20o%20im%C3%B3vel%20ficou%20no%20nome%20dele.%20Gostaria%20de%20conversar%20sobre%20o%20meu%20caso.", "s": [{"n": "Inventário", "r": "Coloca o imóvel de quem faleceu no nome dos herdeiros, em cartório ou na Justiça.", "l": "inventario.html"}, {"n": "Regularização Imobiliária", "r": "Retificação de área, adjudicação compulsória e o caminho certo para cada imóvel.", "l": "blindagem.html#regularizacao"}, {"n": "Direito de Laje", "r": "A casa construída em cima da casa, com matrícula própria.", "l": "blindagem.html#laje"}]}, {"t": "A posse pode virar matrícula.", "b": "heranca", "w": "https://wa.me/5521971707910?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Amaral%20Gama.%20Moro%20h%C3%A1%20anos%20no%20im%C3%B3vel%20e%20n%C3%A3o%20tenho%20escritura.%20Gostaria%20de%20conversar%20sobre%20o%20meu%20caso.", "s": [{"n": "Usucapião", "r": "Transforma anos de posse em matrícula no seu nome.", "l": "usucapiao.html"}, {"n": "Contrato de Gaveta", "r": "Da compra feita com recibo até a escritura registrada.", "l": "blindagem.html#gaveta"}, {"n": "Reurb", "r": "Regularização fundiária de núcleos informais.", "l": "leilao-investimento.html#reurb"}]}, {"t": "Antes de assinar, o documento na mão.", "b": "compra", "w": "https://wa.me/5521971707910?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Amaral%20Gama.%20Vou%20comprar%20ou%20vender%20um%20im%C3%B3vel.%20Gostaria%20de%20conversar%20sobre%20o%20meu%20caso.", "s": [{"n": "Blindagem Imobiliária", "r": "Matrícula, certidões e parecer escrito antes de assinar.", "l": "blindagem.html#blindagem-imobiliaria"}, {"n": "Ganho de Capital na Venda", "r": "Quanto vai para o Imposto de Renda antes de vender.", "l": "leilao-investimento.html#ganho-capital"}, {"n": "Revisão de ITBI Pago a Maior", "r": "Imposto de transmissão calculado sobre valor acima do declarado.", "l": "defesa-proprietario.html#itbi"}]}, {"t": "É relação de consumo, e há caminho.", "b": "consumidor", "w": "https://wa.me/5521971707910?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Amaral%20Gama.%20Tenho%20problema%20com%20construtora%20ou%20conta%20de%20%C3%A1gua%20e%20luz.%20Gostaria%20de%20conversar%20sobre%20o%20meu%20caso.", "s": [{"n": "Atraso na Entrega de Imóvel na Planta", "r": "A obra passou do prazo combinado.", "l": "defesa-proprietario.html#atraso"}, {"n": "Vícios Construtivos", "r": "Infiltração, trinca e defeito que aparece depois da mudança.", "l": "defesa-proprietario.html#vicios"}, {"n": "Revisão de Contas de Água e Luz", "r": "Conta fora do padrão, estimativa e cobrança retroativa.", "l": "defesa-proprietario.html#contas"}]}, {"t": "O condomínio, com documento na mão.", "b": "condominio", "w": "https://wa.me/5521971707910?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Amaral%20Gama.%20Sou%20s%C3%ADndico%20ou%20moro%20em%20condom%C3%ADnio.%20Gostaria%20de%20conversar%20sobre%20o%20meu%20caso.", "s": [{"n": "Raio-X Condominial", "r": "Auditoria em três pilares, com semáforo de riscos e plano de ação.", "l": "condominio.html#raio-x"}, {"n": "Assessoria a Condomínios", "r": "Acompanhamento jurídico contínuo para o síndico.", "l": "condominio.html#assessoria"}, {"n": "Defesa do Condômino", "r": "Multa, cota acima do devido e contas que não fecham.", "l": "condominio.html#condomino"}]}, {"t": "Locação, dos dois lados do contrato.", "b": "locacao", "w": "https://wa.me/5521971707910?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Amaral%20Gama.%20Alugo%20um%20im%C3%B3vel%20ou%20moro%20de%20aluguel.%20Gostaria%20de%20conversar%20sobre%20o%20meu%20caso.", "s": [{"n": "Ação de Despejo", "r": "Por falta de pagamento, fim do contrato ou descumprimento.", "l": "locacao.html#despejo"}, {"n": "Cobrança de Aluguéis e Encargos", "r": "Aluguel, condomínio e IPTU atrasados, contra inquilino e fiador.", "l": "locacao.html#cobranca"}, {"n": "Defesa do Inquilino", "r": "Despejo, consignação e devolução da caução.", "l": "locacao.html#inquilino"}]}, {"t": "Edital e matrícula antes do lance.", "b": "leilao", "w": "https://wa.me/5521971707910?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Amaral%20Gama.%20Vou%20arrematar%20em%20leil%C3%A3o%20ou%20investir.%20Gostaria%20de%20conversar%20sobre%20o%20meu%20caso.", "s": [{"n": "Due Diligence de Leilão", "r": "Edital, matrícula e débitos analisados antes do lance.", "l": "leilao-investimento.html#due-diligence-leilao"}, {"n": "Acompanhamento Pós-Arremate", "r": "Carta de arrematação, registro e imissão na posse.", "l": "leilao-investimento.html#pos-arremate"}, {"n": "Assessoria a Investidores", "r": "Parecer de viabilidade antes de investir.", "l": "leilao-investimento.html#investidores"}]}, {"t": "Há prazos e defesas antes do leilão.", "b": "leilao", "w": "https://wa.me/5521971707910?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Amaral%20Gama.%20Estou%20com%20parcelas%20atrasadas%20do%20financiamento.%20Gostaria%20de%20conversar%20sobre%20o%20meu%20caso.", "s": [{"n": "Defesa do Devedor Fiduciário", "r": "Parcelas atrasadas e o risco de leilão pelo banco.", "l": "leilao-investimento.html#devedor-fiduciario"}]}, {"t": "Imposto lançado errado se revisa.", "b": "consumidor", "w": "https://wa.me/5521971707910?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Amaral%20Gama.%20A%20Prefeitura%20est%C3%A1%20cobrando%20IPTU%20ou%20ITBI.%20Gostaria%20de%20conversar%20sobre%20o%20meu%20caso.", "s": [{"n": "Revisão de IPTU e Valor Venal", "r": "Área, uso ou valor venal lançados de forma errada.", "l": "defesa-proprietario.html#iptu"}, {"n": "Revisão de ITBI Pago a Maior", "r": "Imposto de transmissão calculado sobre valor acima do declarado.", "l": "defesa-proprietario.html#itbi"}, {"n": "Defesa em Execução Fiscal", "r": "A Prefeitura cobra na Justiça IPTU ou taxa atrasada.", "l": "defesa-proprietario.html#execucao-fiscal"}]}, {"t": "Um jurídico ao lado da operação.", "b": "corretores", "w": "https://wa.me/5521971707910?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Amaral%20Gama.%20Sou%20corretor%20ou%20tenho%20imobili%C3%A1ria.%20Gostaria%20de%20conversar%20sobre%20o%20meu%20caso.", "s": [{"n": "Assessoria Jurídica a Corretores e Imobiliárias", "r": "Suporte recorrente nos negócios em andamento.", "l": "corretores-imobiliarias.html#parceria"}, {"n": "Contratos da Imobiliária", "r": "Administração, autorização de venda e parceria.", "l": "corretores-imobiliarias.html#contratos-imobiliaria"}, {"n": "Comissão de Corretagem", "r": "Cobrança ou defesa da comissão.", "l": "corretores-imobiliarias.html#comissao"}]}];
+  var chips=[].slice.call(document.querySelectorAll('.sv-chip')), ans=document.getElementById('sv-answer');
+  var tabs=[].slice.call(document.querySelectorAll('.sv-tab')), panels=[].slice.call(document.querySelectorAll('.sv-panel'));
+  function esc(t){var d=document.createElement('div');d.textContent=t;return d.innerHTML}
+  function selectTab(id,focus){
+    tabs.forEach(function(t){var on=t.id==='tab-'+id;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;if(on&&focus)t.focus()});
+    panels.forEach(function(p){p.hidden=p.id!=='bloco-'+id});
+  }
+  chips.forEach(function(c){c.addEventListener('click',function(){
+    var on=c.getAttribute('aria-pressed')==='true';
+    chips.forEach(function(x){x.setAttribute('aria-pressed','false')});
+    if(on){ans.hidden=true;return}
+    c.setAttribute('aria-pressed','true');
+    var s=SIT[+c.dataset.sit], b=document.getElementById('tab-'+s.b);
+    ans.innerHTML='<h3>'+esc(s.t)+'</h3><ul>'+s.s.map(function(x){return '<li><a href="'+x.l+'"><strong>'+esc(x.n)+'</strong><span>'+esc(x.r)+'</span></a></li>'}).join('')+'</ul>'+
+      '<div class="sv-actions"><a class="btn" href="'+s.w+'" target="_blank" rel="noopener">Conversar no WhatsApp</a><a class="link" href="#todos-os-servicos" data-bloco="'+s.b+'">Ver todo o bloco '+esc(b?b.firstChild.textContent.trim():'')+' →</a></div>';
+    ans.hidden=false;
+    ans.querySelector('[data-bloco]').addEventListener('click',function(){selectTab(s.b)});
+    if(ans.getBoundingClientRect().top>innerHeight*.7) ans.scrollIntoView({behavior:'smooth',block:'nearest'});
+  })});
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){selectTab(t.id.slice(4))});
+    t.addEventListener('keydown',function(e){
+      var k=e.key, j=k==='ArrowRight'?i+1:k==='ArrowLeft'?i-1:k==='Home'?0:k==='End'?tabs.length-1:null;
+      if(j===null)return; e.preventDefault(); j=(j+tabs.length)%tabs.length; selectTab(tabs[j].id.slice(4),true);
+    });
+  });
+  var q=document.getElementById('sv-q'), cat=document.querySelector('.sv-catalog'), empty=document.getElementById('sv-empty');
+  function norm(t){return t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'')}
+  q.addEventListener('input',function(){
+    var v=norm(q.value.trim());
+    cat.classList.toggle('sv-searching',!!v);
+    var any=false;
+    panels.forEach(function(p){
+      var n=0;
+      [].forEach.call(p.querySelectorAll('.sv-card'),function(c){var hay=norm(c.dataset.busca), ok=!v||v.split(/\s+/).filter(function(w){return w.length>2}).every(function(w){return hay.indexOf(w)>-1});c.hidden=!ok;if(ok)n++});
+      p.classList.toggle('sv-none',!!v&&!n); if(n)any=true;
+    });
+    empty.hidden=!v||any;
+    if(!v){var sel=tabs.filter(function(t){return t.getAttribute('aria-selected')==='true'})[0];selectTab(sel.id.slice(4))}
+  });
+  var alias={'raio-x':'condominio','blindagem':'heranca','leilao':'leilao','b-defesa':'consumidor'};
+  var h=location.hash.slice(1); if(alias[h]) selectTab(alias[h]); else if(document.getElementById('bloco-'+h)) selectTab(h);
+})();
+</script>
 <script src="assets/site.js" defer></script>
 </body>
 </html>
